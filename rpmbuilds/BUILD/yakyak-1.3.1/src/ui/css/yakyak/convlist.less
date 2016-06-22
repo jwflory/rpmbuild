@@ -1,0 +1,226 @@
+
+.convlist {
+    .label {
+        font-size: 9px;
+        line-height: 18px;
+        text-transform: uppercase;
+        color: var(--white);
+        text-align: center;
+        background-color: var(--darkgrey);
+    }
+    .starred {
+        .conv:last-child {
+            .divider {
+                display: none;
+            }
+        }
+    }
+    .conv {
+        position: relative;
+        padding: 10px 15px 10px;
+        line-height: 25px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        &:hover{
+            background: var(--ghostwhite);
+            .thumbs .presence.true{
+                border-color: #f4f4f4;
+            }
+        }
+        .divider {
+            position: absolute;
+            bottom:-1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: var(--white);
+            display: none;
+        }
+        &.selected {
+            background: var(--lightgrey);
+            cursor: auto;
+            &:before{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 3px;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                background: var(--green);
+            }
+            .divider {
+                display: none;
+            }
+            .thumbs .presence.true{
+                border-color: #e8e8e8;
+            }
+        }
+        &.unread {
+            font-weight: 500;
+        }
+        &.purehang {
+            color: #999;
+            font-style: italic;
+        }
+        .convinfos {
+            width: 100%;
+            line-height: 1;
+            .lasttime{
+                font-size: 10px;
+                width: 100%;
+                display: block;
+                padding-bottom: 4px;
+                color: var(--darkgrey);
+
+            }
+            .convname {
+                flex: 1;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                display: block;
+                margin-bottom: 4px;
+                color: var(--lightblack);
+            }
+            .lastmessage{
+                > div{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    font-size: 12px;
+                }
+            }
+        }
+        &.unread {
+            .convinfos {
+                .convname {
+                    font-weight: bold;
+                }
+            }
+        }
+        .unreadcount {
+            flex: none;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--white);
+            height: 18px;
+            line-height: 18px;
+            text-align: center;
+            border-radius: 20px;
+            z-index: 2;
+            position: absolute;
+            top: -3px;
+            right: -3px;
+            width: auto;
+            min-width: 18px;
+            background: var(--red);
+        }
+        @square: 50px;
+        .thumbs {
+            height: @square;
+            width: @square;
+            flex: none;
+            position: relative;
+            margin-right: 10px;
+            + .convinfos{
+                width: calc(~"100% - 60px");
+            }
+            img {
+                border-radius: 50%;
+                position: absolute;
+            }
+            .presence{
+                position: absolute;
+                display: block;
+                width: 12px;
+                height: 12px;
+                border-radius: 100%;
+                bottom: -1px;
+                right: -1px;
+                &.true{
+                    background: var(--green);
+                    border: 2px solid var(--white);
+                }
+            }
+            .moreuser{
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background: var(--lightblack);
+                border-radius: 100%;
+                color: var(--white);
+                text-align: center;
+                font-size: 11px;
+            }
+
+            /* one image */
+            @size-one: 50px;
+            img:nth-child(1):nth-last-of-type(1) {
+                width: @size-one;
+                height: @size-one;
+                left: 0;
+            }
+
+            &.thumbs-2{
+                img{
+                    width: 29px;
+                    height: 29px;
+                    &:nth-child(1){
+                        top: 0;
+                        left: 0;
+                    }
+                    &:nth-child(2){
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+            }
+            &.thumbs-3{
+                img{
+                    width: 25px;
+                    height: 25px;
+                    &:nth-child(1){
+                        top: 1px;
+                        left: 25%;
+                    }
+                    &:nth-child(2){
+                        bottom: 1px;
+                        left: 0;
+                    }
+                    &:nth-child(3){
+                        bottom: 1px;
+                        right: 0;
+                    }
+                }
+            }
+            &.thumbs-4{
+                img{
+                    width: 25px;
+                    height: 25px;
+                    &:nth-child(1){
+                        top: 0;
+                        left: 0;
+                    }
+                    &:nth-child(2){
+                        top: 0;
+                        right: 0;
+                    }
+                    &:nth-child(3){
+                        bottom: 0;
+                        left: 0;
+                    }
+                    &:nth-child(4){
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

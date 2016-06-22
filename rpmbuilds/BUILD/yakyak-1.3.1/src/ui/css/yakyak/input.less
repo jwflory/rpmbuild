@@ -1,0 +1,125 @@
+@button-container-width: 60px;
+
+.input {
+    font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif, "NotoColorEmoji";
+    position: relative;
+
+    span.emoticon {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 20px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    > #emoji-container {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        transform: translate3d(0, 0, 0);
+        transition: all .3s ease;
+        background: var(--white);
+        &.open{
+            transform: translate3d(0, -100%, 0);
+        }
+        > #emoji-group-selector {
+            overflow-x: scroll;
+            border-bottom: 1px solid var(--lightgrey);
+            height: 33px;
+            margin-left: 5px;
+
+            > .emoticon {
+                height: 32px;
+                padding-bottom:2px;
+            }
+            > .emoticon.glow {
+                border-bottom: 2px solid var(--grey);
+
+            }
+
+        }
+
+        > #emoji-group-selector::-webkit-scrollbar {
+            display: none;
+        }
+        > .emoji-selector {
+            height:131px;
+            overflow-y: scroll;
+            border-bottom: 1px solid var(--lightgrey);
+            width: 100%;
+            padding: 5px 2px 5px 5px;
+
+            > .group-content {
+                display: none;
+                padding: none;
+                margin: none;
+            }
+            > .group-content.visible {
+                display: block;
+            }
+        }
+
+    }
+
+    > div.input-container {
+        padding: 12px 15px 10px;
+        width: 100%;
+        background: var(--white);
+        z-index: 1;
+        position: relative;
+        height: 49px;
+        textarea {
+            width: 100%;
+            resize: vertical;
+            font-size: 14px;
+            line-height: 18px;
+            outline: none;
+            border: none;
+            background: none;
+            padding: 3px 60px 3px 10px;
+            color: var(--black);
+            &::-webkit-input-placeholder{
+                color: var(--grey);
+            }
+        }
+        span.button-container {
+            position: absolute;
+            right: 12px;
+            bottom: 12px;
+            flex: none;
+            border-radius: 3px;
+            height: 26px;
+            padding: 0;
+            overflow: hidden;
+
+            button {
+                display: inline-block;
+                flex: none;
+                margin-left: 5px;
+                background: white;
+                border: none;
+                background: none;
+                height: 26px;
+                width: 26px;
+                padding: 0;
+                cursor: pointer;
+                color: var(--darkgrey);
+                &:hover{
+                    color: var(--lightblack);
+                }
+                span {
+                    display: inline-block;
+                    font-size: 16px;
+                    line-height: 25px;
+                    height: 24px;
+                    overflow: hidden
+                }
+            }
+        }
+        input[type=file] {
+            display: none;
+        }
+    }
+}

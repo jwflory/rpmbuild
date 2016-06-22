@@ -1,0 +1,104 @@
+@keyframes spinnerRotate
+{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+.spin{
+    animation: spinnerRotate 2s linear infinite;
+}
+.applayout {
+    display: flex;
+    height: 100%;
+    > .controls {
+        flex: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        .button {
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-right: 1px solid var(--grey);
+        }
+    }
+    > .leftresize {
+        position: fixed;
+        top: 0;
+        left: 198px;
+        bottom: 0;
+        width: 5px;
+        z-index: 1;
+        flex: none;
+        cursor: ew-resize;
+        -webkit-user-select: none;
+    }
+    > .left {
+        -webkit-user-select: none;
+        background: var(--white);
+        flex: none;
+        display: flex;
+        flex-direction: column;
+        width: 240px;
+        position: relative;
+        &:after{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            border-right: 1px solid rgba(0, 0, 0, .1);
+            display: block;
+            content: '';
+        }
+        > .list {
+            flex: 1;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        > .lfoot {
+            flex: none;
+        }
+    }
+    > .right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(var(--green), var(--green) var(--headerbarheight), var(--lightgrey) var(--headerbarheight));
+        > .main {
+            flex: 1;
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding-bottom: 35px;
+        }
+        > .maininfo {
+            flex: none;
+            position: absolute;
+            bottom: 50px;
+        }
+        > .foot {
+            flex: none;
+            background: var(--white);
+            border-top: 1px solid rgba(0, 0, 0, .1);
+        }
+    }
+    > .info {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        > div {
+            padding: 5px 10px;
+            border: 1px solid var(--grey);
+            border-top: none;
+            background: white;
+        }
+    }
+}
+
+.applayout:not(.osx) ::-webkit-scrollbar {
+    width: 6px;
+}
+
+.applayout:not(.osx) ::-webkit-scrollbar-thumb {
+    background: var(--grey);
+}

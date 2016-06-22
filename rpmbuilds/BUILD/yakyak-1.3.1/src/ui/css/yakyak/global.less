@@ -1,0 +1,73 @@
+// minimal reset
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: #fff;
+    font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: var(--black);
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    font-weight: 100;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 8px;
+    margin-bottom: 1.5em;
+}
+
+::-webkit-input-placeholder {
+    color: #ddd;
+}
+
+input, textarea {
+  font-family: inherit;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+body .notr {
+    box-shadow: 0 0 2px rgba(0,0,0,0.4);
+    min-width: 1px;
+    min-height: 1px;
+    padding: 9px 14px;
+    border-radius: 5px;
+    border: none;
+    color: #666;
+    font-size: 0.9em;
+    .material-icons{
+        vertical-align: top;
+        font-size: 20px;
+    }
+}
+body .notrstack {
+    min-width: 1px;
+}
+
+*:focus {
+    outline: none;
+}
