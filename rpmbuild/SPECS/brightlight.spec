@@ -1,13 +1,11 @@
 Name:           brightlight
-Version:        4
+Version:        5
 Release:        1%{?dist}
 Summary:        CLI tool to change screen backlight brightness
 
 License:        GPLv2+
 URL:            https://github.com/multiplexd/brightlight
 Source0:        %{url}/archive/v%{version}.tar.gz
-
-Patch0:         https://patch-diff.githubusercontent.com/raw/multiplexd/brightlight/pull/1.patch
 
 BuildRequires:  gcc
 BuildRequires:  libbsd-devel
@@ -24,6 +22,8 @@ on Linux systems using the kernel sysfs interface.
 
 
 %build
+export CFLAGS="%{optflags}"
+export LDFLAGS="%{__global_ldflags}"
 %make_build
 
 
