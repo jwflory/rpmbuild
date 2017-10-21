@@ -1,37 +1,35 @@
-%global debug_package %{nil}
-
 Name:           brightlight
 Version:        4
 Release:        1%{?dist}
-Summary:        CLI tool to change screen back light brightness
+Summary:        CLI tool to change screen backlight brightness
 
 License:        GPLv2+
-URL:            https://github.com/multiplexd/%{name}
-Source0:        https://github.com/multiplexd/%{name}/archive/v%{version}.tar.gz
+URL:            https://github.com/multiplexd/brightlight
+Source0:        %{url}/archive/v%{version}.tar.gz
+
+Patch0:         https://patch-diff.githubusercontent.com/raw/multiplexd/brightlight/pull/1.patch
 
 BuildRequires:  gcc
-BuildRequires:  libbsd
 BuildRequires:  libbsd-devel
 BuildRequires:  make
 
 
 %description
-brightlight is a program that can get and set the screen back light brightness
+brightlight is a program that can get and set the screen backlight brightness
 on Linux systems using the kernel sysfs interface.
 
 
 %prep
-%setup -q
+%autosetup
 
 
 %build
-make %{?_smp_mflags}
+%make_build
 
 
 %install
-rm -rf $RPM_BUILD_ROOT
 mkdir -p %{buildroot}%{_bindir}
-install -p -m 755 %{_builddir}/%{name}-%{version}/%{name} %{buildroot}%{_bindir}
+install -p -m 755 %{name} %{buildroot}%{_bindir}/%{name}
 
 
 %files
