@@ -1,0 +1,20 @@
+
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.N7DPjW
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.7m0ZAA
+gcc brightlight.c -o brightlight -O2 -fstack-protector-strong -lbsd
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.TZHzkf
+extracting debug info from /home/jflory/rpmbuild/BUILDROOT/brightlight-4-1.fc26.x86_64/usr/bin/brightlight
+/usr/lib/rpm/sepdebugcrcfix: Updated 0 CRC32s, 1 CRC32s did match.
+Processing files: brightlight-4-1.fc26.x86_64
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.e2eaWU
+Provides: brightlight = 4-1.fc26 brightlight(x86-64) = 4-1.fc26
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: libbsd.so.0()(64bit) libbsd.so.0(LIBBSD_0.0)(64bit) libc.so.6()(64bit) libc.so.6(GLIBC_2.2.5)(64bit) libc.so.6(GLIBC_2.3)(64bit) libc.so.6(GLIBC_2.4)(64bit) libc.so.6(GLIBC_2.7)(64bit) rtld(GNU_HASH)
+Processing files: brightlight-debuginfo-4-1.fc26.x86_64
+Provides: brightlight-debuginfo = 4-1.fc26 brightlight-debuginfo(x86-64) = 4-1.fc26
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /home/jflory/rpmbuild/BUILDROOT/brightlight-4-1.fc26.x86_64
+Wrote: /home/jflory/git/misc/rpm-specs/rpmbuilds/SPECS/brightlight-4-1.fc26.src.rpm
+Wrote: /home/jflory/git/misc/rpm-specs/rpmbuilds/SPECS/x86_64/brightlight-4-1.fc26.x86_64.rpm
+Wrote: /home/jflory/git/misc/rpm-specs/rpmbuilds/SPECS/x86_64/brightlight-debuginfo-4-1.fc26.x86_64.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.mB0uMA
