@@ -5,7 +5,7 @@ Summary:        CLI tool to change screen backlight brightness
 
 License:        GPLv2+
 URL:            https://github.com/multiplexd/brightlight
-Source0:        %{url}/archive/v%{version}.tar.gz
+Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  gcc
 BuildRequires:  libbsd-devel
