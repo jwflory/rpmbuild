@@ -1,3 +1,4 @@
 rpmbuild/BUILD
 rpmbuild/BUILDROOT
 rpmbuild/RPMS
+rpmbuild/SOURCES
