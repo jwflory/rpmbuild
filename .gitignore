@@ -1,4 +1,6 @@
-rpmbuild/BUILD
-rpmbuild/BUILDROOT
-rpmbuild/RPMS
-rpmbuild/SOURCES
+**/BUILD
+**/BUILDROOT
+**/RPMS
+
+# Ignore source archives
+*.tar.gz
