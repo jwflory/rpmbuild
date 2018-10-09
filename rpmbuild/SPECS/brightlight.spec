@@ -41,11 +41,20 @@ install -p -m 755 %{name} %{buildroot}%{_bindir}/%{name}
 
 
 %changelog
-* Mon Oct 08 2018 Justin W. Flory <jwf@fedoraproject.org> - 7-1
+* Tue Oct 09 2018 Justin W. Flory <jwf@fedoraproject.org> - 7-1
 - Upgrade to upstream major release
+
+* Thu Jul 12 2018 Fedora Release Engineering <releng@fedoraproject.org> - 5-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
+
+* Wed Feb 07 2018 Fedora Release Engineering <releng@fedoraproject.org> - 5-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
+
 * Thu Nov 09 2017 Justin W. Flory <jwf@fedoraproject.org> - 5-2
 - setuid to root to change back-light brightness as non-privileged user
+
 * Tue Oct 31 2017 Justin W. Flory <jwf@fedoraproject.org> - 5-1
 - Tweak to the Makefile, contributed by Igor Gnatenko
+
 * Sat Oct 21 2017 Justin W. Flory <jwf@fedoraproject.org> - 4-1
 - First brightlight package
