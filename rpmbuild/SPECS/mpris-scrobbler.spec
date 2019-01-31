@@ -15,13 +15,13 @@ BuildRequires:  pkgconfig(libevent)
 BuildRequires:  pkgconfig(json-c)
 BuildRequires:  /usr/bin/m4
 
-%if 0%{?rhel} && 0%{?rhel} < 8 || 0%{?fedora} <= 29
+%if 0%{?rhel} && 0%{?rhel} < 8 || 0%{?fedora} <= 29 || 0%{?suse_version}
 BuildRequires: systemd
 %else
 BuildRequires: systemd-rpm-macros
 %endif
 
-%if ! 0%{?rhel}
+%if 0%{?fedora} >= 28
 BuildRequires: /usr/bin/scdoc
 %endif
 
@@ -58,7 +58,7 @@ player that exposes this interface.
 %{_bindir}/%{name}-signon
 %{_userunitdir}/%{name}.service
 
-%if ! 0%{?rhel}
+%if 0%{?fedora} >= 28
 %{_mandir}/man1/mpris-scrobbler{,-signon}.1*
 %{_mandir}/man5/mpris-scrobbler-credentials.5*
 %endif
