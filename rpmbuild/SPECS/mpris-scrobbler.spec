@@ -15,7 +15,7 @@ BuildRequires:  pkgconfig(libevent)
 BuildRequires:  pkgconfig(json-c)
 BuildRequires:  /usr/bin/m4
 
-%if 0%{?rhel} && 0%{?rhel} < 8
+%if 0%{?rhel} && 0%{?rhel} < 8 || 0%{?fedora} <= 29
 BuildRequires: systemd
 %else
 BuildRequires: systemd-rpm-macros
