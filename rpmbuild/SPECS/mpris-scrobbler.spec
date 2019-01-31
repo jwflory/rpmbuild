@@ -7,19 +7,25 @@ License:        MIT
 URL:            https://github.com/mariusor/mpris-scrobbler
 Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 
-BuildRequires:  cmake
-BuildRequires:  dbus dbus-devel
-BuildRequires:  expat expat-devel
 BuildRequires:  gcc
-BuildRequires:  json-c json-c-devel
-BuildRequires:  libcurl libcurl-devel
-BuildRequires:  libevent libevent-devel
-BuildRequires:  m4 make
-BuildRequires:  meson ninja-build
-BuildRequires:  openssl openssl-devel
-BuildRequires:  scdoc
+BuildRequires:  meson
+BuildRequires:  pkgconfig(dbus-1)
+BuildRequires:  pkgconfig(libcurl)
+BuildRequires:  pkgconfig(libevent)
+BuildRequires:  pkgconfig(json-c)
+BuildRequires:  /usr/bin/m4
 
-Requires:       xdg-utils
+%if 0%{?rhel} && 0%{?rhel} < 8
+BuildRequires: systemd
+%else
+BuildRequires: systemd-rpm-macros
+%endif
+
+%if ! 0%{?rhel}
+BuildRequires: /usr/bin/scdoc
+%endif
+
+Requires:       /usr/bin/xdg-open
 
 
 %description
@@ -47,15 +53,18 @@ player that exposes this interface.
 
 
 %files
-%doc %{_mandir}/man1/mpris-scrobbler.1.gz
-%doc %{_mandir}/man5/mpris-scrobbler-credentials.5.gz
-%doc %{_mandir}/man1/mpris-scrobbler-signon.1.gz
 %license LICENSE
 %{_bindir}/%{name}
 %{_bindir}/%{name}-signon
-/usr/lib/systemd/user/%{name}.service
+%{_userunitdir}/%{name}.service
+
+%if ! 0%{?rhel}
+%{_mandir}/man1/mpris-scrobbler{,-signon}.1*
+%{_mandir}/man5/mpris-scrobbler-credentials.5*
+%endif
 
 
 %changelog
 * Thu Jan 31 2019 Justin W. Flory <jflory7@fedoraproject.org> - 0.3.1-1
 - First release: mpris-scrobbler
+- With guidance and help from  Igor Gnatenko
