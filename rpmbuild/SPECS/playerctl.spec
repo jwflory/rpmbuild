@@ -60,14 +60,14 @@ Requires:       %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
 %license COPYING
 %{_bindir}/%{name}
 %{_datadir}/gir-1.0/Playerctl-2.0.gir
+%{_libdir}/girepository-1.0/Playerctl-2.0.typelib
+%{_libdir}/lib%{name}.*
 %doc %{_datadir}/gtk-doc/html/%{name}/*
 %doc %{_datadir}/man/man1/%{name}.*
 
 
 %files devel
 %{_includedir}/%{name}/*.h
-%{_libdir}/girepository-1.0/Playerctl-2.0.typelib
-%{_libdir}/lib%{name}.*
 %{_libdir}/pkgconfig/%{name}.pc
 
 
