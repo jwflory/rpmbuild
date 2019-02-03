@@ -1,9 +1,9 @@
 Name:           playerctl
 Version:        2.0.1
-Release:        1%{?dist}
-Summary:        MPRIS command-line controller and library for spotify, vlc, audacious, bmp, cmus, and others
+Release:        2%{?dist}
+Summary:        Command-line MPRIS-compatible Media Player Controller
 
-License:        LGPLv3
+License:        LGPLv3+
 URL:            https://github.com/acrisci/playerctl
 Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 
@@ -13,8 +13,6 @@ BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(gobject-2.0)
 BuildRequires:  gobject-introspection-devel
 BuildRequires:  gtk-doc
-
-Requires:       glib
 
 
 %description
@@ -29,10 +27,13 @@ in your favorite scripting language that allows more detailed control like the
 ability to subscribe to media player events or get metadata such as artist and
 title for the playing track.
 
+Examples of players implementing the MPRIS D-Bus Interface Specification include
+spotify, vlc, audacious, bmp, cmus, and others.
+
 
 %package devel
 Summary:        Development libraries and header files for %{name}
-Requires:       %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 
 %description devel
@@ -72,5 +73,8 @@ Requires:       %{name}%{?_isa} = %{?epoch:%{epoch}:}%{version}-%{release}
 
 
 %changelog
+* Thu Jan 31 2019 Justin W. Flory <jflory7@fedoraproject.org> - 2.0.1-2
+- Improvements suggested by Dridi Boukelmoune in RH Bugzilla bug 1671571
+
 * Thu Jan 31 2019 Justin W. Flory <jflory7@fedoraproject.org> - 2.0.1-1
 - First release: playerctl
