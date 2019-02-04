@@ -1,17 +1,17 @@
 Name:           playerctl
 Version:        2.0.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Command-line MPRIS-compatible Media Player Controller
 
 License:        LGPLv3+
 URL:            https://github.com/acrisci/playerctl
-Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
+Source:         %{url}/releases/download/v%{version}/%{name}-%{version}.tar.xz
 
 BuildRequires:  gcc
 BuildRequires:  meson
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(gobject-2.0)
-BuildRequires:  gobject-introspection-devel
+BuildRequires:  pkgconfig(gobject-introspection-1.0)
 BuildRequires:  gtk-doc
 
 
@@ -36,8 +36,18 @@ Summary:        Development libraries and header files for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 
+%package docs
+Summary:        Documentation related to %{name}
+BuildArch:      noarch
+Requires:       %{name}%{?_isa} = %{version}-%{release}
+
+
 %description devel
-%{summary}.
+%{summary}
+
+
+%description docs
+%{summary}
 
 
 %prep
@@ -62,17 +72,25 @@ Requires:       %{name}%{?_isa} = %{version}-%{release}
 %{_bindir}/%{name}
 %{_datadir}/gir-1.0/Playerctl-2.0.gir
 %{_libdir}/girepository-1.0/Playerctl-2.0.typelib
-%{_libdir}/lib%{name}.*
-%doc %{_datadir}/gtk-doc/html/%{name}/*
-%doc %{_datadir}/man/man1/%{name}.*
+%{_libdir}/lib%{name}.so.2*
+%{_datadir}/man/man1/%{name}.*
 
 
 %files devel
 %{_includedir}/%{name}/*.h
+%{_libdir}/lib%{name}.a
+%{_libdir}/lib%{name}.so
 %{_libdir}/pkgconfig/%{name}.pc
 
 
+%files docs
+%{_datadir}/gtk-doc/html/%{name}/*
+
+
 %changelog
+* Thu Jan 31 2019 Justin W. Flory <jflory7@fedoraproject.org> - 2.0.1-3
+- Additional improvements by Dridi Boukelmoune and Fabio Valentini in RH Bugzilla bug 1671571
+
 * Thu Jan 31 2019 Justin W. Flory <jflory7@fedoraproject.org> - 2.0.1-2
 - Improvements suggested by Dridi Boukelmoune in RH Bugzilla bug 1671571
 
