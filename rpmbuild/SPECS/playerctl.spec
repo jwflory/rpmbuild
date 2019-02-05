@@ -1,6 +1,6 @@
 Name:           playerctl
 Version:        2.0.1
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Command-line MPRIS-compatible Media Player Controller
 
 License:        LGPLv3+
@@ -36,6 +36,11 @@ Summary:        Development libraries and header files for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 
+%package devel-static
+Summary:        Static libraries for %{name} development
+Requires:       %{name}%{?_isa} = %{version}-%{release}
+
+
 %package docs
 Summary:        Documentation related to %{name}
 BuildArch:      noarch
@@ -46,6 +51,10 @@ Requires:       %{name}%{?_isa} = %{version}-%{release}
 %{summary}
 
 
+%description devel-static
+%{summary}
+
+
 %description docs
 %{summary}
 
@@ -53,15 +62,12 @@ Requires:       %{name}%{?_isa} = %{version}-%{release}
 %prep
 %autosetup
 
-
 %build
 %meson
 %meson_build
 
-
 %install
 %meson_install
-
 
 %check
 %meson_test
@@ -78,9 +84,12 @@ Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %files devel
 %{_includedir}/%{name}/*.h
-%{_libdir}/lib%{name}.a
 %{_libdir}/lib%{name}.so
 %{_libdir}/pkgconfig/%{name}.pc
+
+
+%files devel-static
+%{_libdir}/lib%{name}.a
 
 
 %files docs
@@ -88,6 +97,9 @@ Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 
 %changelog
+* Mon Feb 04 2019 Justin W. Flory <jflory7@fedoraproject.org> - 2.0.1-4
+- Build separate package for static development libraries
+
 * Thu Jan 31 2019 Justin W. Flory <jflory7@fedoraproject.org> - 2.0.1-3
 - Additional improvements by Dridi Boukelmoune and Fabio Valentini in RH Bugzilla bug 1671571
 
