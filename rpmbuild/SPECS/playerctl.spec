@@ -1,6 +1,6 @@
 Name:           playerctl
 Version:        2.0.1
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Command-line MPRIS-compatible Media Player Controller
 
 License:        LGPLv3+
@@ -36,26 +36,26 @@ Summary:        Development libraries and header files for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 
-%package devel-static
-Summary:        Static libraries for %{name} development
-Requires:       %{name}%{?_isa} = %{version}-%{release}
-
-
 %package docs
 Summary:        Documentation related to %{name}
 BuildArch:      noarch
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 
+%package static
+Summary:        Static libraries for %{name} development
+Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
+
+
 %description devel
 %{summary}
 
 
-%description devel-static
+%description docs
 %{summary}
 
 
-%description docs
+%description static
 %{summary}
 
 
@@ -88,15 +88,18 @@ Requires:       %{name}%{?_isa} = %{version}-%{release}
 %{_libdir}/pkgconfig/%{name}.pc
 
 
-%files devel-static
-%{_libdir}/lib%{name}.a
-
-
 %files docs
 %{_datadir}/gtk-doc/html/%{name}/*
 
 
+%files static
+%{_libdir}/lib%{name}.a
+
+
 %changelog
+* Wed Feb 06 2019 Justin W. Flory <jflory7@fedoraproject.org> - 2.0.1-5
+- Change static package name and dependency on -devel package
+
 * Mon Feb 04 2019 Justin W. Flory <jflory7@fedoraproject.org> - 2.0.1-4
 - Build separate package for static development libraries
 
