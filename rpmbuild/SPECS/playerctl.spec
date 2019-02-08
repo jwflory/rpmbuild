@@ -1,6 +1,6 @@
 Name:           playerctl
 Version:        2.0.1
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Command-line MPRIS-compatible Media Player Controller
 
 License:        LGPLv3+
@@ -13,6 +13,8 @@ BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(gobject-2.0)
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
 BuildRequires:  gtk-doc
+
+Requires:       %{name}-libs%{?_isa} = %{version}-%{release}
 
 
 %description
@@ -42,6 +44,11 @@ BuildArch:      noarch
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 
+%package libs
+Summary:        Libraries and shared code for %{name}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
+
+
 %package static
 Summary:        Static libraries for %{name} development
 Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
@@ -52,6 +59,10 @@ Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 
 
 %description docs
+%{summary}
+
+
+%description libs
 %{summary}
 
 
@@ -76,13 +87,11 @@ Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 %files
 %license COPYING
 %{_bindir}/%{name}
-%{_datadir}/gir-1.0/Playerctl-2.0.gir
-%{_libdir}/girepository-1.0/Playerctl-2.0.typelib
-%{_libdir}/lib%{name}.so.2*
 %{_datadir}/man/man1/%{name}.*
 
 
 %files devel
+%{_datadir}/gir-1.0/Playerctl-2.0.gir
 %{_includedir}/%{name}/*.h
 %{_libdir}/lib%{name}.so
 %{_libdir}/pkgconfig/%{name}.pc
@@ -92,11 +101,19 @@ Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 %{_datadir}/gtk-doc/html/%{name}/*
 
 
+%files libs
+%{_libdir}/girepository-1.0/Playerctl-2.0.typelib
+%{_libdir}/lib%{name}.so.2*
+
+
 %files static
 %{_libdir}/lib%{name}.a
 
 
 %changelog
+* Thu Feb 07 2019 Justin W. Flory <jflory7@fedoraproject.org> - 2.0.1-6
+- Split out into -libs subpackage (BZ # 1671571)
+
 * Wed Feb 06 2019 Justin W. Flory <jflory7@fedoraproject.org> - 2.0.1-5
 - Change static package name and dependency on -devel package
 
