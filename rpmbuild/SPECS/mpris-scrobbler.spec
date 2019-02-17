@@ -22,7 +22,7 @@ BuildRequires:  systemd-rpm-macros
 %{?systemd_requires}
 %endif
 
-%if 0%{?fedora} >= 28 || 0%{?suse_version}
+%if 0%{?fedora} >= 28
 BuildRequires:  /usr/bin/scdoc
 %endif
 
