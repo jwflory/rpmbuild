@@ -1,6 +1,6 @@
 Name:           mpris-scrobbler
 Version:        0.3.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        User daemon to submit currently playing song to LastFM, LibreFM, ListenBrainz
 
 License:        MIT
@@ -15,14 +15,15 @@ BuildRequires:  pkgconfig(libevent)
 BuildRequires:  pkgconfig(json-c)
 BuildRequires:  /usr/bin/m4
 
-%if 0%{?rhel} && 0%{?rhel} < 8 || 0%{?fedora} <= 29 || 0%{?suse_version}
-BuildRequires: systemd
+%if 0%{?rhel} && 0%{?rhel} < 8 || 0%{?fedora} <= 29
+BuildRequires:  systemd
 %else
-BuildRequires: systemd-rpm-macros
+BuildRequires:  systemd-rpm-macros
+%{?systemd_requires}
 %endif
 
-%if 0%{?fedora} >= 28
-BuildRequires: /usr/bin/scdoc
+%if 0%{?fedora} >= 28 || 0%{?suse_version}
+BuildRequires:  /usr/bin/scdoc
 %endif
 
 Requires:       /usr/bin/xdg-open
@@ -38,18 +39,21 @@ player that exposes this interface.
 %prep
 %autosetup
 
-
 %build
 %meson
 %meson_build
 
-
 %install
 %meson_install
 
-
 %check
 %meson_test
+
+%post
+%systemd_user_post %{name}.service
+
+%preun
+%systemd_user_preun %{name}.service
 
 
 %files
@@ -65,6 +69,9 @@ player that exposes this interface.
 
 
 %changelog
+* Sat Feb 16 2019 Justin W. Flory <jflory7@fedoraproject.org> - 0.3.1-2
+- Add systemd scriptlets
+
 * Thu Jan 31 2019 Justin W. Flory <jflory7@fedoraproject.org> - 0.3.1-1
 - First release: mpris-scrobbler
 - With guidance and help from  Igor Gnatenko
