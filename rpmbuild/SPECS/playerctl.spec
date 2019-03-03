@@ -1,6 +1,6 @@
 Name:           playerctl
 Version:        2.0.1
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        Command-line MPRIS-compatible Media Player Controller
 
 License:        LGPLv3+
@@ -55,19 +55,19 @@ Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 
 
 %description devel
-%{summary}
+%{summary}.
 
 
 %description docs
-%{summary}
+%{summary}.
 
 
 %description libs
-%{summary}
+%{summary}.
 
 
 %description static
-%{summary}
+%{summary}.
 
 
 %prep
@@ -91,6 +91,7 @@ Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 
 
 %files devel
+%license COPYING
 %{_datadir}/gir-1.0/Playerctl-2.0.gir
 %{_includedir}/%{name}/*.h
 %{_libdir}/lib%{name}.so
@@ -98,19 +99,26 @@ Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 
 
 %files docs
+%license COPYING
 %{_datadir}/gtk-doc/html/%{name}/*
 
 
 %files libs
+%license COPYING
 %{_libdir}/girepository-1.0/Playerctl-2.0.typelib
 %{_libdir}/lib%{name}.so.2*
 
 
 %files static
+%license COPYING
 %{_libdir}/lib%{name}.a
 
 
 %changelog
+* Sun Mar 03 2019 Justin W. Flory <jflory7@fedoraproject.org> - 2.0.1-7
+- Add license to all sub-packages
+- Add period after all sub-package summary macros
+
 * Thu Feb 07 2019 Justin W. Flory <jflory7@fedoraproject.org> - 2.0.1-6
 - Split out into -libs subpackage (BZ # 1671571)
 
