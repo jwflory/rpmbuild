@@ -1,6 +1,6 @@
 Name:           playerctl
 Version:        2.0.1
-Release:        7%{?dist}
+Release:        8%{?dist}
 Summary:        Command-line MPRIS-compatible Media Player Controller
 
 License:        LGPLv3+
@@ -37,34 +37,30 @@ spotify, vlc, audacious, bmp, cmus, and others.
 Summary:        Development libraries and header files for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 
+%description devel
+%{summary}.
+
 
 %package docs
 Summary:        Documentation related to %{name}
 BuildArch:      noarch
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 
+%description docs
+%{summary}.
+
 
 %package libs
 Summary:        Libraries and shared code for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 
+%description libs
+%{summary}.
+
 
 %package static
 Summary:        Static libraries for %{name} development
 Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
-
-
-%description devel
-%{summary}.
-
-
-%description docs
-%{summary}.
-
-
-%description libs
-%{summary}.
-
 
 %description static
 %{summary}.
@@ -115,6 +111,9 @@ Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 
 
 %changelog
+* Tue Mar 19 2019 Justin W. Flory <jflory7@fedoraproject.org> - 2.0.1-8
+- Fix sub-package description strings
+
 * Sun Mar 03 2019 Justin W. Flory <jflory7@fedoraproject.org> - 2.0.1-7
 - Add license to all sub-packages
 - Add period after all sub-package summary macros
