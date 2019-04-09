@@ -1,18 +1,16 @@
 Name:           playerctl
-Version:        2.0.1
-Release:        8%{?dist}
+Version:        2.0.2
+Release:        1%{?dist}
 Summary:        Command-line MPRIS-compatible Media Player Controller
 
 License:        LGPLv3+
 URL:            https://github.com/acrisci/playerctl
 Source:         %{url}/releases/download/v%{version}/%{name}-%{version}.tar.xz
 
-BuildRequires:  gcc
 BuildRequires:  meson
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(gobject-2.0)
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
-BuildRequires:  gtk-doc
 
 Requires:       %{name}-libs%{?_isa} = %{version}-%{release}
 
@@ -36,6 +34,7 @@ spotify, vlc, audacious, bmp, cmus, and others.
 %package devel
 Summary:        Development libraries and header files for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
+Requires:       pkgconfig(gobject-introspection-1.0)
 
 %description devel
 %{summary}.
@@ -44,7 +43,8 @@ Requires:       %{name}%{?_isa} = %{version}-%{release}
 %package docs
 Summary:        Documentation related to %{name}
 BuildArch:      noarch
-Requires:       %{name}%{?_isa} = %{version}-%{release}
+Requires:       %{name} = %{version}-%{release}
+BuildRequires:  gtk-doc
 
 %description docs
 %{summary}.
@@ -89,14 +89,14 @@ Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 %files devel
 %license COPYING
 %{_datadir}/gir-1.0/Playerctl-2.0.gir
-%{_includedir}/%{name}/*.h
+%{_includedir}/%{name}/
 %{_libdir}/lib%{name}.so
 %{_libdir}/pkgconfig/%{name}.pc
 
 
 %files docs
 %license COPYING
-%{_datadir}/gtk-doc/html/%{name}/*
+%{_datadir}/gtk-doc/
 
 
 %files libs
@@ -111,6 +111,14 @@ Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 
 
 %changelog
+* Tue Apr 09 2019 Justin W. Flory <jflory7@fedoraproject.org> - 2.0.1-1
+- Update to latest upstream release
+- Address feedback from BZ #1671571:
+    - Fix ownership of directories created by package
+    - Move gtk-doc dependency to docs sub-package
+    - Docs sub-package no longer depends on arch-specific main package
+    - Other minor improvements from fedora-review tool
+
 * Tue Mar 19 2019 Justin W. Flory <jflory7@fedoraproject.org> - 2.0.1-8
 - Fix sub-package description strings
 
