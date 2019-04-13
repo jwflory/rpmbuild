@@ -13,8 +13,6 @@ BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(gobject-2.0)
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
 
-Requires:       %{name}-libs%{?_isa} = %{version}-%{release}
-
 
 %description
 Playerctl is a command-line utility and library for controlling media players
@@ -52,7 +50,6 @@ BuildRequires:  gtk-doc
 
 %package libs
 Summary:        Libraries and shared code for %{name}
-Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %description libs
 %{summary}.
@@ -87,7 +84,6 @@ Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 
 
 %files devel
-%license COPYING
 %{_datadir}/gir-1.0/Playerctl-2.0.gir
 %{_includedir}/%{name}/
 %{_libdir}/lib%{name}.so
@@ -95,7 +91,6 @@ Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 
 
 %files docs
-%license COPYING
 %{_datadir}/gtk-doc/
 
 
@@ -106,7 +101,6 @@ Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 
 
 %files static
-%license COPYING
 %{_libdir}/lib%{name}.a
 
 
