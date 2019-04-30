@@ -1,6 +1,6 @@
 Name:           zork
 Version:        1.0.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Public Domain source code to the original DUNGEON game (Zork I)
 
 License:        Public Domain
@@ -31,20 +31,21 @@ and Norm Schryer (AT&T Bell Labs).
 %autosetup
 
 %build
-export CFLAGS="%{optflags}"
-export DATADIR="%{_datadir}/%{name}"
-export LDFLAGS="%{__global_ldflags}"
-%make_build
+%make_build \
+    CFLAGS="%{optflags}" \
+    DATADIR="%{_datadir}/%{name}" \
+    LDFLAGS="%{__global_ldflags}"
 
 %install
-export BINDIR="%{buildroot}%{_bindir}"
-export DATADIR="%{buildroot}%{_datadir}/%{name}/"
-export LIBDIR="%{buildroot}%{_datadir}"
-export MANDIR="%{buildroot}%{_mandir}"
-%make_install
+%make_install \
+    BINDIR="%{buildroot}%{_bindir}" \
+    DATADIR="%{buildroot}%{_datadir}/%{name}/" \
+    LIBDIR="%{buildroot}%{_datadir}" \
+    MANDIR="%{buildroot}%{_mandir}"
 
 
 %files
+%doc README.md
 %license readme.txt
 %{_bindir}/%{name}
 %{_datadir}/%{name}/dtextc.dat
@@ -52,5 +53,8 @@ export MANDIR="%{buildroot}%{_mandir}"
 
 
 %changelog
+* Tue Apr 30 2019 Justin W. Flory <jflory7@fedoraproject.org> - 1.0.2-2
+- Use Fedora CFLAGS during compilation
+
 * Mon Apr 29 2019 Justin W. Flory <jflory7@fedoraproject.org> - 1.0.2-1
 - First zork package

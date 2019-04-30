@@ -1,38 +1,18 @@
-From 164d57aeb1ee48d2222f15982269bf63ac3b2b63 Mon Sep 17 00:00:00 2001
+From ce241188ca387a42c3ab09454c881acfe30c955e Mon Sep 17 00:00:00 2001
 From: "Justin W. Flory" <git@jwf.io>
-Date: Mon, 29 Apr 2019 21:00:13 -0400
+Date: Tue, 30 Apr 2019 15:36:07 -0400
 Subject: [PATCH 1/1] Makefile: Change compile options for Fedora RPM package
 
 ---
- Makefile | 15 +++++++++------
- dinit.c  |  2 +-
- 2 files changed, 10 insertions(+), 7 deletions(-)
+ Makefile | 6 +++---
+ dinit.c  | 2 +-
+ 2 files changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/Makefile b/Makefile
-index 88305ce..1e9da7a 100644
+index 88305ce..aae1916 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -1,13 +1,16 @@
- # Makefile for dungeon
- 
- # Where to install the program
--BINDIR = /usr/games
-+# - overridden for RPM package (set in environment variable)
-+# BINDIR = /usr/games
- 
- # Where to install the data file
--DATADIR = /usr/games/lib
-+# - overridden for RPM package (set in environment variable)
-+# DATADIR = /usr/games/lib
- 
- # Where to install the man page
--MANDIR = /usr/share/man
-+# - overridden for RPM package (set in environment variable)
-+# MANDIR = /usr/share/man
- 
- # The dungeon program provides a ``more'' facility which tries to
- # figure out how many rows the terminal has.  Several mechanisms are
-@@ -42,7 +45,7 @@ TERMFLAG =
+@@ -42,7 +42,7 @@ TERMFLAG =
  # Uncomment the following line if you want to have access to the game
  # debugging tool.  This is invoked by typing "gdt".  It is not much
  # use except for debugging.
@@ -41,7 +21,7 @@ index 88305ce..1e9da7a 100644
  
  # Compilation flags
  CFLAGS = -g #-static
-@@ -69,7 +72,7 @@ dungeon: $(OBJS) dtextc.dat
+@@ -69,7 +69,7 @@ dungeon: $(OBJS) dtextc.dat
  	$(CC) $(CFLAGS) -o zork $(OBJS) $(LIBS)
  
  install: zork dtextc.dat
@@ -50,7 +30,7 @@ index 88305ce..1e9da7a 100644
  	cp zork $(BINDIR)
  	cp dtextc.dat $(DATADIR)
  	cp dungeon.6 $(MANDIR)/man6/
-@@ -93,7 +96,7 @@ local.o: local.c funcs.h vars.h
+@@ -93,7 +93,7 @@ local.o: local.c funcs.h vars.h
  	$(CC) $(CFLAGS) $(GDTFLAG) -c local.c
  
  supp.o: supp.c funcs.h vars.h
