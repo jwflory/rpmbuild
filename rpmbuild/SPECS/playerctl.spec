@@ -1,5 +1,5 @@
 Name:           playerctl
-Version:        2.0.2
+Version:        2.1.1
 Release:        2%{?dist}
 Summary:        Command-line MPRIS-compatible Media Player Controller
 
@@ -12,6 +12,8 @@ BuildRequires:  meson
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(gobject-2.0)
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
+
+Requires:       %{name}-libs%{?_isa} = %{version}-%{release}
 
 
 %description
@@ -50,6 +52,7 @@ BuildRequires:  gtk-doc
 
 %package libs
 Summary:        Libraries and shared code for %{name}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %description libs
 %{summary}.
@@ -67,7 +70,7 @@ Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 %autosetup
 
 %build
-%meson
+%meson -Dbash-completions=true
 %meson_build
 
 %install
@@ -80,10 +83,14 @@ Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 %files
 %license COPYING
 %{_bindir}/%{name}
+%{_bindir}/%{name}d
+%{_datadir}/bash-completion/completions/playerctl.bash
+%{_datadir}/dbus-1/services/org.mpris.MediaPlayer2.playerctld.service
 %{_datadir}/man/man1/%{name}.*
 
 
 %files devel
+%license COPYING
 %{_datadir}/gir-1.0/Playerctl-2.0.gir
 %{_includedir}/%{name}/
 %{_libdir}/lib%{name}.so
@@ -91,6 +98,7 @@ Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 
 
 %files docs
+%license COPYING
 %{_datadir}/gtk-doc/
 
 
@@ -101,10 +109,23 @@ Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 
 
 %files static
+%license COPYING
 %{_libdir}/lib%{name}.a
 
 
 %changelog
+* Sat Feb 15 2020 Justin W. Flory <jflory7@fedoraproject.org> - 2.1.1-2
+- Install Bash completions provided by upstream
+
+* Thu Feb 06 2020 Dridi Boukelmoune <dridi@fedoraproject.org> - 2.1.1-1
+- Update to latest upstream release
+
+* Thu Jan 30 2020 Fedora Release Engineering <releng@fedoraproject.org> - 2.0.2-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
+
+* Fri Jul 26 2019 Fedora Release Engineering <releng@fedoraproject.org> - 2.0.2-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
+
 * Thu Apr 11 2019 Justin W. Flory <jflory7@fedoraproject.org> - 2.0.2-2
 - Add gcc as BuildRequires
 - Remove pkgconfig(gobject-introspection-1.0) from devel sub-package
