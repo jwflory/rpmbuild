@@ -1,26 +1,21 @@
-%define         github_name protonvpn-cli-ng
+%global         github_name protonvpn-cli-ng
+%global         srcname protonvpn_cli
 
 Name:           protonvpn-cli
 Version:        2.2.2
-Release:        1%{?dist}
+Release:        4%{?dist}
 Summary:        Linux command-line client for ProtonVPN written in Python
 
 License:        GPLv3
-Vendor:         Proton Technologies AG <contact@protonvpn.com>
-URL:            https://github.com/ProtonVPN/protonvpn-cli-ng
+URL:            https://github.com/ProtonVPN/%{github_name}
 Source:         %{url}/archive/v%{version}/%{github_name}-%{version}.tar.gz
 
 Group:          Development/Libraries
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Prefix:         %{_prefix}
 
 BuildArch:      noarch
 BuildRequires:  python3
-%if 0%{?mageia}
-BuildRequires:  lib64python3-devel
-%else
 BuildRequires:  python3-devel
-%endif
 
 Requires:       openvpn
 Requires:       python3
@@ -52,22 +47,26 @@ https://github.com/ProtonVPN/protonvpn-cli-ng
 
 
 %prep
-%setup -q -n %{github_name}-%{version} -n %{github_name}-%{version}
+%autosetup -n %{github_name}-%{version}
 
 %build
-python3 setup.py build
+%py3_build
 
 %install
-python3 setup.py install --single-version-externally-managed -O1 --root=$RPM_BUILD_ROOT --record=INSTALLED_FILES
+%py3_install
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
-%files -f INSTALLED_FILES
-%defattr(-,root,root)
+%files
+%license LICENSE
+%doc README.md
+%{python3_sitelib}/%{srcname}-*.egg-info/
+%{python3_sitelib}/%{srcname}/
+%{_bindir}/protonvpn
 
 
 %changelog
+* Tue Mar 03 2020 Justin W. Flory <jflory7@fedoraproject.org> - 2.2.2-4
+- Adhere to Fedora Packaging Guidelines via fedora-review
+
 * Wed Feb 26 2020 Justin W. Flory <jflory7@fedoraproject.org> - 2.2.2-1
 - Update to latest upstream
 
