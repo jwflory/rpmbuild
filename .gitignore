@@ -1,4 +1,5 @@
 ########## RPM.gitignore ##########
+
 **/BUILD
 **/BUILDROOT
 **/RPMS
@@ -7,6 +8,10 @@
 # Ignore source archives
 *.tar.gz
 *.tar.xz
+
+# Ignore output from fedora-review CLI tool
+**/copr-build*
+
 
 ########## Vim.gitignore ##########
 # https://github.com/github/gitignore/blob/master/Global/Vim.gitignore
