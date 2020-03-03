@@ -1,7 +1,7 @@
 Name:           zork
 Version:        1.0.2
-Release:        2%{?dist}
-Summary:        Public Domain source code to the original DUNGEON game (Zork I)
+Release:        3%{?dist}
+Summary:        Public Domain original DUNGEON game (Zork I)
 
 License:        Public Domain
 URL:            https://github.com/devshane/zork
@@ -42,17 +42,24 @@ and Norm Schryer (AT&T Bell Labs).
     DATADIR="%{buildroot}%{_datadir}/%{name}/" \
     LIBDIR="%{buildroot}%{_datadir}" \
     MANDIR="%{buildroot}%{_mandir}"
+echo ".so dungeon.6" > %{buildroot}%{_mandir}/man6/zork.6
 
 
 %files
+%doc history
 %doc README.md
 %license readme.txt
 %{_bindir}/%{name}
 %{_datadir}/%{name}/dtextc.dat
 %{_mandir}/man6/dungeon.6.gz
+%{_mandir}/man6/zork.6*
 
 
 %changelog
+* Tue Mar 03 2020 Justin W. Flory <jflory7@fedoraproject.org> - 1.0.2-3
+- Add manpage alias for zork, to match binary executable
+- Add upstream 'history' file as a doc
+
 * Tue Apr 30 2019 Justin W. Flory <jflory7@fedoraproject.org> - 1.0.2-2
 - Use Fedora CFLAGS during compilation
 
