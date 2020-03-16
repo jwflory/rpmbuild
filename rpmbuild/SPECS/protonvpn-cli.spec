@@ -3,15 +3,12 @@
 
 Name:           protonvpn-cli
 Version:        2.2.2
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Linux command-line client for ProtonVPN written in Python
 
 License:        GPLv3
 URL:            https://github.com/ProtonVPN/%{github_name}
 Source:         %{url}/archive/v%{version}/%{github_name}-%{version}.tar.gz
-
-Group:          Development/Libraries
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildArch:      noarch
 BuildRequires:  python3
@@ -19,6 +16,8 @@ BuildRequires:  python3-devel
 
 Requires:       openvpn
 Requires:       python3
+Requires:       python3-docopt
+Requires:       python3-requests
 %if 0%{?fedora} || 0%{?.el8}
 Recommends:     dialog
 Recommends:     python3-dialog
@@ -64,6 +63,10 @@ https://github.com/ProtonVPN/protonvpn-cli-ng
 
 
 %changelog
+* Mon Mar 16 2020 Justin W. Flory <jflory7@fedoraproject.org> - 2.2.2-5
+- Remove tags not used in Fedora packages
+- Add missing dependencies tracked in upstream requirements.txt
+
 * Tue Mar 03 2020 Justin W. Flory <jflory7@fedoraproject.org> - 2.2.2-4
 - Adhere to Fedora Packaging Guidelines via fedora-review
 
