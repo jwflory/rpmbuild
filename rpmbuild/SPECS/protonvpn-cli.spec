@@ -3,7 +3,7 @@
 
 Name:           protonvpn-cli
 Version:        2.2.2
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Linux command-line client for ProtonVPN written in Python
 
 License:        GPLv3
@@ -20,12 +20,10 @@ Requires:       python3-docopt
 Requires:       python3-requests
 %if 0%{?fedora} || 0%{?.el8}
 Recommends:     dialog
-Recommends:     python3-dialog
 Recommends:     NetworkManager-openvpn
 Suggests:       NetworkManager-openvpn-gnome
 %else
 Requires:       dialog
-Requires:       python3-dialog
 %endif
 
 %description
@@ -63,6 +61,9 @@ https://github.com/ProtonVPN/protonvpn-cli-ng
 
 
 %changelog
+* Fri Mar 27 2020 Justin W. Flory <jflory7@fedoraproject.org> - 2.2.2-6
+- Remove python3-dialog as dependency (already Required automatically)
+
 * Mon Mar 16 2020 Justin W. Flory <jflory7@fedoraproject.org> - 2.2.2-5
 - Remove tags not used in Fedora packages
 - Add missing dependencies tracked in upstream requirements.txt
