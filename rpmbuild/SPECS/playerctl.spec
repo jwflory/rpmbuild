@@ -1,6 +1,6 @@
 Name:           playerctl
-Version:        2.1.1
-Release:        2%{?dist}
+Version:        2.2.1
+Release:        1%{?dist}
 Summary:        Command-line MPRIS-compatible Media Player Controller
 
 License:        LGPLv3+
@@ -114,6 +114,14 @@ Requires:       %{name}-devel%{?_isa} = %{version}-%{release}
 
 
 %changelog
+* Thu Oct 08 2020 Justin W. Flory <jflory7@fedoraproject.org> - 2.2.1-1
+- Fix a crash when the emoji() template function is used
+- Add a shift command to playerctld to shift the active player
+- Fix a crash when system players are present
+
+* Tue Jul 28 2020 Fedora Release Engineering <releng@fedoraproject.org> - 2.1.1-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
+
 * Sat Feb 15 2020 Justin W. Flory <jflory7@fedoraproject.org> - 2.1.1-2
 - Install Bash completions provided by upstream
 
