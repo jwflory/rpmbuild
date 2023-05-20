@@ -1,0 +1,436 @@
+Mock Version: 2.12
+Mock Version: 2.12
+Mock Version: 2.12
+ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --target x86_64 --nodeps /builddir/build/SPECS/python-protonvpn-nm-lib.spec'], chrootPath='/var/lib/mock/fedora-rawhide-x86_64/root'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0x7fe1f6779480>timeout=0uid=1000gid=135user='mockbuild'nspawn_args=['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.yxv7rz52:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']unshare_net=TrueprintOutput=False)
+Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.yxv7rz52:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
+Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'fb67ef910dae4e43a751b4d2fe5d92ed', '-D', '/var/lib/mock/fedora-rawhide-x86_64/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.yxv7rz52:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', 'bash', '--login', '-c', '/usr/bin/rpmbuild -bs --target x86_64 --nodeps /builddir/build/SPECS/python-protonvpn-nm-lib.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
+Building target platforms: x86_64
+Building for target x86_64
+setting SOURCE_DATE_EPOCH=1635379200
+Wrote: /builddir/build/SRPMS/python-protonvpn-nm-lib-3.6.0-6.fc36.src.rpm
+Child return code was: 0
+ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/SPECS/python-protonvpn-nm-lib.spec'], chrootPath='/var/lib/mock/fedora-rawhide-x86_64/root'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0x7fe1f6779480>timeout=0uid=1000gid=135user='mockbuild'nspawn_args=['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.yxv7rz52:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']unshare_net=TrueprintOutput=False)
+Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.yxv7rz52:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
+Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '8de29f6b595b46b1931615f8eb0de60b', '-D', '/var/lib/mock/fedora-rawhide-x86_64/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.yxv7rz52:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', 'bash', '--login', '-c', '/usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/SPECS/python-protonvpn-nm-lib.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
+Building target platforms: x86_64
+Building for target x86_64
+setting SOURCE_DATE_EPOCH=1635379200
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.VebT41
++ umask 022
++ cd /builddir/build/BUILD
++ cd /builddir/build/BUILD
++ rm -rf protonvpn-nm-lib-3.6.0
++ /usr/bin/gzip -dc /builddir/build/SOURCES/3.6.0.tar.gz
++ /usr/bin/tar -xof -
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd protonvpn-nm-lib-3.6.0
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ RPM_EC=0
+++ jobs -p
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.DdE3mW
++ umask 022
++ cd /builddir/build/BUILD
++ cd protonvpn-nm-lib-3.6.0
++ mkdir -p /builddir/build/BUILD/protonvpn-nm-lib-3.6.0/.pyproject-builddir
++ CFLAGS='-O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -m64  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection'
++ LDFLAGS='-Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 '
++ TMPDIR=/builddir/build/BUILD/protonvpn-nm-lib-3.6.0/.pyproject-builddir
++ /usr/bin/python3 -m pip wheel --wheel-dir /builddir/build/BUILD/protonvpn-nm-lib-3.6.0/pyproject-wheeldir --no-deps --use-pep517 --no-build-isolation --disable-pip-version-check --no-clean --progress-bar off --verbose .
+Processing /builddir/build/BUILD/protonvpn-nm-lib-3.6.0
+  Preparing metadata (pyproject.toml): started
+  Running command /usr/bin/python3 /usr/lib/python3.10/site-packages/pip/_vendor/pep517/in_process/_in_process.py prepare_metadata_for_build_wheel /builddir/build/BUILD/protonvpn-nm-lib-3.6.0/.pyproject-builddir/tmp8wkxeh86
+  running dist_info
+  creating /builddir/build/BUILD/protonvpn-nm-lib-3.6.0/.pyproject-builddir/pip-modern-metadata-guijfd5n/protonvpn_nm_lib.egg-info
+  writing /builddir/build/BUILD/protonvpn-nm-lib-3.6.0/.pyproject-builddir/pip-modern-metadata-guijfd5n/protonvpn_nm_lib.egg-info/PKG-INFO
+  writing dependency_links to /builddir/build/BUILD/protonvpn-nm-lib-3.6.0/.pyproject-builddir/pip-modern-metadata-guijfd5n/protonvpn_nm_lib.egg-info/dependency_links.txt
+  writing requirements to /builddir/build/BUILD/protonvpn-nm-lib-3.6.0/.pyproject-builddir/pip-modern-metadata-guijfd5n/protonvpn_nm_lib.egg-info/requires.txt
+  writing top-level names to /builddir/build/BUILD/protonvpn-nm-lib-3.6.0/.pyproject-builddir/pip-modern-metadata-guijfd5n/protonvpn_nm_lib.egg-info/top_level.txt
+  writing manifest file '/builddir/build/BUILD/protonvpn-nm-lib-3.6.0/.pyproject-builddir/pip-modern-metadata-guijfd5n/protonvpn_nm_lib.egg-info/SOURCES.txt'
+  reading manifest file '/builddir/build/BUILD/protonvpn-nm-lib-3.6.0/.pyproject-builddir/pip-modern-metadata-guijfd5n/protonvpn_nm_lib.egg-info/SOURCES.txt'
+  reading manifest template 'MANIFEST.in'
+  warning: no previously-included files found matching 'tests/'
+  warning: no previously-included files found matching '.gitignore'
+  warning: no previously-included files found matching '*.sh'
+  warning: no previously-included files found matching '*.yml'
+  warning: no previously-included files found matching 'Dockerfile'
+  adding license file 'LICENSE'
+  adding license file 'COPYING.md'
+  writing manifest file '/builddir/build/BUILD/protonvpn-nm-lib-3.6.0/.pyproject-builddir/pip-modern-metadata-guijfd5n/protonvpn_nm_lib.egg-info/SOURCES.txt'
+  creating '/builddir/build/BUILD/protonvpn-nm-lib-3.6.0/.pyproject-builddir/pip-modern-metadata-guijfd5n/protonvpn_nm_lib.dist-info'
+  adding license file "LICENSE" (matched pattern "LICEN[CS]E*")
+  adding license file "COPYING.md" (matched pattern "COPYING*")
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: protonvpn-nm-lib
+  Building wheel for protonvpn-nm-lib (pyproject.toml): started
+  Running command /usr/bin/python3 /usr/lib/python3.10/site-packages/pip/_vendor/pep517/in_process/_in_process.py build_wheel /builddir/build/BUILD/protonvpn-nm-lib-3.6.0/.pyproject-builddir/tmpawwzzdao
+  running bdist_wheel
+  running build
+  running build_py
+  creating build
+  creating build/lib
+  creating build/lib/protonvpn_nm_lib
+  copying protonvpn_nm_lib/__init__.py -> build/lib/protonvpn_nm_lib
+  copying protonvpn_nm_lib/api.py -> build/lib/protonvpn_nm_lib
+  copying protonvpn_nm_lib/constants.py -> build/lib/protonvpn_nm_lib
+  copying protonvpn_nm_lib/country_codes.py -> build/lib/protonvpn_nm_lib
+  copying protonvpn_nm_lib/enums.py -> build/lib/protonvpn_nm_lib
+  copying protonvpn_nm_lib/exceptions.py -> build/lib/protonvpn_nm_lib
+  copying protonvpn_nm_lib/logger.py -> build/lib/protonvpn_nm_lib
+  creating build/lib/protonvpn_nm_lib/core
+  copying protonvpn_nm_lib/core/__init__.py -> build/lib/protonvpn_nm_lib/core
+  copying protonvpn_nm_lib/core/country.py -> build/lib/protonvpn_nm_lib/core
+  copying protonvpn_nm_lib/core/environment.py -> build/lib/protonvpn_nm_lib/core
+  copying protonvpn_nm_lib/core/status.py -> build/lib/protonvpn_nm_lib/core
+  copying protonvpn_nm_lib/core/subprocess_wrapper.py -> build/lib/protonvpn_nm_lib/core
+  copying protonvpn_nm_lib/core/utilities.py -> build/lib/protonvpn_nm_lib/core
+  copying protonvpn_nm_lib/core/utils.py -> build/lib/protonvpn_nm_lib/core
+  creating build/lib/protonvpn_nm_lib/daemon
+  copying protonvpn_nm_lib/daemon/__init__.py -> build/lib/protonvpn_nm_lib/daemon
+  copying protonvpn_nm_lib/daemon/daemon_logger.py -> build/lib/protonvpn_nm_lib/daemon
+  copying protonvpn_nm_lib/daemon/dbus_daemon_reconnector.py -> build/lib/protonvpn_nm_lib/daemon
+  creating build/lib/protonvpn_nm_lib/core/client_config
+  copying protonvpn_nm_lib/core/client_config/__init__.py -> build/lib/protonvpn_nm_lib/core/client_config
+  copying protonvpn_nm_lib/core/client_config/client_config.py -> build/lib/protonvpn_nm_lib/core/client_config
+  creating build/lib/protonvpn_nm_lib/core/connection_backend
+  copying protonvpn_nm_lib/core/connection_backend/__init__.py -> build/lib/protonvpn_nm_lib/core/connection_backend
+  copying protonvpn_nm_lib/core/connection_backend/connection_backend.py -> build/lib/protonvpn_nm_lib/core/connection_backend
+  creating build/lib/protonvpn_nm_lib/core/dbus
+  copying protonvpn_nm_lib/core/dbus/__init__.py -> build/lib/protonvpn_nm_lib/core/dbus
+  copying protonvpn_nm_lib/core/dbus/dbus_logger.py -> build/lib/protonvpn_nm_lib/core/dbus
+  copying protonvpn_nm_lib/core/dbus/dbus_login1_wrapper.py -> build/lib/protonvpn_nm_lib/core/dbus
+  copying protonvpn_nm_lib/core/dbus/dbus_network_manager_wrapper.py -> build/lib/protonvpn_nm_lib/core/dbus
+  copying protonvpn_nm_lib/core/dbus/dbus_reconnect.py -> build/lib/protonvpn_nm_lib/core/dbus
+  copying protonvpn_nm_lib/core/dbus/dbus_wrapper.py -> build/lib/protonvpn_nm_lib/core/dbus
+  creating build/lib/protonvpn_nm_lib/core/keyring
+  copying protonvpn_nm_lib/core/keyring/__init__.py -> build/lib/protonvpn_nm_lib/core/keyring
+  copying protonvpn_nm_lib/core/keyring/_base.py -> build/lib/protonvpn_nm_lib/core/keyring
+  copying protonvpn_nm_lib/core/keyring/linuxkeyring.py -> build/lib/protonvpn_nm_lib/core/keyring
+  copying protonvpn_nm_lib/core/keyring/textfilekeyring.py -> build/lib/protonvpn_nm_lib/core/keyring
+  creating build/lib/protonvpn_nm_lib/core/killswitch
+  copying protonvpn_nm_lib/core/killswitch/__init__.py -> build/lib/protonvpn_nm_lib/core/killswitch
+  copying protonvpn_nm_lib/core/killswitch/ipv6_leak_protection.py -> build/lib/protonvpn_nm_lib/core/killswitch
+  copying protonvpn_nm_lib/core/killswitch/killswitch.py -> build/lib/protonvpn_nm_lib/core/killswitch
+  creating build/lib/protonvpn_nm_lib/core/location
+  copying protonvpn_nm_lib/core/location/__init__.py -> build/lib/protonvpn_nm_lib/core/location
+  creating build/lib/protonvpn_nm_lib/core/metadata
+  copying protonvpn_nm_lib/core/metadata/__init__.py -> build/lib/protonvpn_nm_lib/core/metadata
+  creating build/lib/protonvpn_nm_lib/core/notification
+  copying protonvpn_nm_lib/core/notification/__init__.py -> build/lib/protonvpn_nm_lib/core/notification
+  copying protonvpn_nm_lib/core/notification/notifications.py -> build/lib/protonvpn_nm_lib/core/notification
+  creating build/lib/protonvpn_nm_lib/core/report
+  copying protonvpn_nm_lib/core/report/__init__.py -> build/lib/protonvpn_nm_lib/core/report
+  copying protonvpn_nm_lib/core/report/bug.py -> build/lib/protonvpn_nm_lib/core/report
+  creating build/lib/protonvpn_nm_lib/core/servers
+  copying protonvpn_nm_lib/core/servers/__init__.py -> build/lib/protonvpn_nm_lib/core/servers
+  copying protonvpn_nm_lib/core/servers/list.py -> build/lib/protonvpn_nm_lib/core/servers
+  creating build/lib/protonvpn_nm_lib/core/session
+  copying protonvpn_nm_lib/core/session/__init__.py -> build/lib/protonvpn_nm_lib/core/session
+  copying protonvpn_nm_lib/core/session/session.py -> build/lib/protonvpn_nm_lib/core/session
+  creating build/lib/protonvpn_nm_lib/core/streaming
+  copying protonvpn_nm_lib/core/streaming/__init__.py -> build/lib/protonvpn_nm_lib/core/streaming
+  copying protonvpn_nm_lib/core/streaming/icons.py -> build/lib/protonvpn_nm_lib/core/streaming
+  copying protonvpn_nm_lib/core/streaming/streaming.py -> build/lib/protonvpn_nm_lib/core/streaming
+  creating build/lib/protonvpn_nm_lib/core/user_settings
+  copying protonvpn_nm_lib/core/user_settings/__init__.py -> build/lib/protonvpn_nm_lib/core/user_settings
+  copying protonvpn_nm_lib/core/user_settings/default_settings_backend.py -> build/lib/protonvpn_nm_lib/core/user_settings
+  copying protonvpn_nm_lib/core/user_settings/settings_backend.py -> build/lib/protonvpn_nm_lib/core/user_settings
+  copying protonvpn_nm_lib/core/user_settings/settings_configurator.py -> build/lib/protonvpn_nm_lib/core/user_settings
+  creating build/lib/protonvpn_nm_lib/core/vpn
+  copying protonvpn_nm_lib/core/vpn/__init__.py -> build/lib/protonvpn_nm_lib/core/vpn
+  copying protonvpn_nm_lib/core/vpn/vpn_configuration.py -> build/lib/protonvpn_nm_lib/core/vpn
+  creating build/lib/protonvpn_nm_lib/core/connection_backend/nm_client
+  copying protonvpn_nm_lib/core/connection_backend/nm_client/__init__.py -> build/lib/protonvpn_nm_lib/core/connection_backend/nm_client
+  copying protonvpn_nm_lib/core/connection_backend/nm_client/monitor_vpn_connection_start.py -> build/lib/protonvpn_nm_lib/core/connection_backend/nm_client
+  copying protonvpn_nm_lib/core/connection_backend/nm_client/nm_client.py -> build/lib/protonvpn_nm_lib/core/connection_backend/nm_client
+  copying protonvpn_nm_lib/core/connection_backend/nm_client/nm_client_mixin.py -> build/lib/protonvpn_nm_lib/core/connection_backend/nm_client
+  creating build/lib/protonvpn_nm_lib/core/connection_backend/nm_client/openvpn
+  copying protonvpn_nm_lib/core/connection_backend/nm_client/openvpn/__init__.py -> build/lib/protonvpn_nm_lib/core/connection_backend/nm_client/openvpn
+  copying protonvpn_nm_lib/core/connection_backend/nm_client/openvpn/configure_openvpn_connection.py -> build/lib/protonvpn_nm_lib/core/connection_backend/nm_client/openvpn
+  creating build/lib/protonvpn_nm_lib/core/connection_backend/nm_client/plugin
+  copying protonvpn_nm_lib/core/connection_backend/nm_client/plugin/__init__.py -> build/lib/protonvpn_nm_lib/core/connection_backend/nm_client/plugin
+  copying protonvpn_nm_lib/core/connection_backend/nm_client/plugin/nm_plugin.py -> build/lib/protonvpn_nm_lib/core/connection_backend/nm_client/plugin
+  creating build/lib/protonvpn_nm_lib/core/metadata/api
+  copying protonvpn_nm_lib/core/metadata/api/__init__.py -> build/lib/protonvpn_nm_lib/core/metadata/api
+  copying protonvpn_nm_lib/core/metadata/api/api_metadata_backend.py -> build/lib/protonvpn_nm_lib/core/metadata/api
+  copying protonvpn_nm_lib/core/metadata/api/default_api_metadata.py -> build/lib/protonvpn_nm_lib/core/metadata/api
+  creating build/lib/protonvpn_nm_lib/core/metadata/connection
+  copying protonvpn_nm_lib/core/metadata/connection/__init__.py -> build/lib/protonvpn_nm_lib/core/metadata/connection
+  copying protonvpn_nm_lib/core/metadata/connection/connection_metadata_backend.py -> build/lib/protonvpn_nm_lib/core/metadata/connection
+  copying protonvpn_nm_lib/core/metadata/connection/default_connection_metadata.py -> build/lib/protonvpn_nm_lib/core/metadata/connection
+  running egg_info
+  creating protonvpn_nm_lib.egg-info
+  writing protonvpn_nm_lib.egg-info/PKG-INFO
+  writing dependency_links to protonvpn_nm_lib.egg-info/dependency_links.txt
+  writing requirements to protonvpn_nm_lib.egg-info/requires.txt
+  writing top-level names to protonvpn_nm_lib.egg-info/top_level.txt
+  writing manifest file 'protonvpn_nm_lib.egg-info/SOURCES.txt'
+  reading manifest file 'protonvpn_nm_lib.egg-info/SOURCES.txt'
+  reading manifest template 'MANIFEST.in'
+  warning: no previously-included files found matching 'tests/'
+  warning: no previously-included files found matching '.gitignore'
+  warning: no previously-included files found matching '*.sh'
+  warning: no previously-included files found matching '*.yml'
+  warning: no previously-included files found matching 'Dockerfile'
+  adding license file 'LICENSE'
+  adding license file 'COPYING.md'
+  writing manifest file 'protonvpn_nm_lib.egg-info/SOURCES.txt'
+  copying protonvpn_nm_lib/app.cfg -> build/lib/protonvpn_nm_lib
+  creating build/lib/protonvpn_nm_lib/templates
+  copying protonvpn_nm_lib/templates/openvpn_template.j2 -> build/lib/protonvpn_nm_lib/templates
+  installing to build/bdist.linux-x86_64/wheel
+  running install
+  running install_lib
+  creating build/bdist.linux-x86_64
+  creating build/bdist.linux-x86_64/wheel
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib
+  copying build/lib/protonvpn_nm_lib/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib
+  copying build/lib/protonvpn_nm_lib/api.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib
+  copying build/lib/protonvpn_nm_lib/constants.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib
+  copying build/lib/protonvpn_nm_lib/country_codes.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib
+  copying build/lib/protonvpn_nm_lib/enums.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib
+  copying build/lib/protonvpn_nm_lib/exceptions.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib
+  copying build/lib/protonvpn_nm_lib/logger.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core
+  copying build/lib/protonvpn_nm_lib/core/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core
+  copying build/lib/protonvpn_nm_lib/core/country.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core
+  copying build/lib/protonvpn_nm_lib/core/environment.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core
+  copying build/lib/protonvpn_nm_lib/core/status.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core
+  copying build/lib/protonvpn_nm_lib/core/subprocess_wrapper.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core
+  copying build/lib/protonvpn_nm_lib/core/utilities.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core
+  copying build/lib/protonvpn_nm_lib/core/utils.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/client_config
+  copying build/lib/protonvpn_nm_lib/core/client_config/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/client_config
+  copying build/lib/protonvpn_nm_lib/core/client_config/client_config.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/client_config
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/connection_backend
+  copying build/lib/protonvpn_nm_lib/core/connection_backend/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/connection_backend
+  copying build/lib/protonvpn_nm_lib/core/connection_backend/connection_backend.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/connection_backend
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/connection_backend/nm_client
+  copying build/lib/protonvpn_nm_lib/core/connection_backend/nm_client/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/connection_backend/nm_client
+  copying build/lib/protonvpn_nm_lib/core/connection_backend/nm_client/monitor_vpn_connection_start.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/connection_backend/nm_client
+  copying build/lib/protonvpn_nm_lib/core/connection_backend/nm_client/nm_client.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/connection_backend/nm_client
+  copying build/lib/protonvpn_nm_lib/core/connection_backend/nm_client/nm_client_mixin.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/connection_backend/nm_client
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/connection_backend/nm_client/openvpn
+  copying build/lib/protonvpn_nm_lib/core/connection_backend/nm_client/openvpn/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/connection_backend/nm_client/openvpn
+  copying build/lib/protonvpn_nm_lib/core/connection_backend/nm_client/openvpn/configure_openvpn_connection.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/connection_backend/nm_client/openvpn
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/connection_backend/nm_client/plugin
+  copying build/lib/protonvpn_nm_lib/core/connection_backend/nm_client/plugin/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/connection_backend/nm_client/plugin
+  copying build/lib/protonvpn_nm_lib/core/connection_backend/nm_client/plugin/nm_plugin.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/connection_backend/nm_client/plugin
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/dbus
+  copying build/lib/protonvpn_nm_lib/core/dbus/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/dbus
+  copying build/lib/protonvpn_nm_lib/core/dbus/dbus_logger.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/dbus
+  copying build/lib/protonvpn_nm_lib/core/dbus/dbus_login1_wrapper.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/dbus
+  copying build/lib/protonvpn_nm_lib/core/dbus/dbus_network_manager_wrapper.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/dbus
+  copying build/lib/protonvpn_nm_lib/core/dbus/dbus_reconnect.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/dbus
+  copying build/lib/protonvpn_nm_lib/core/dbus/dbus_wrapper.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/dbus
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/keyring
+  copying build/lib/protonvpn_nm_lib/core/keyring/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/keyring
+  copying build/lib/protonvpn_nm_lib/core/keyring/_base.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/keyring
+  copying build/lib/protonvpn_nm_lib/core/keyring/linuxkeyring.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/keyring
+  copying build/lib/protonvpn_nm_lib/core/keyring/textfilekeyring.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/keyring
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/killswitch
+  copying build/lib/protonvpn_nm_lib/core/killswitch/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/killswitch
+  copying build/lib/protonvpn_nm_lib/core/killswitch/ipv6_leak_protection.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/killswitch
+  copying build/lib/protonvpn_nm_lib/core/killswitch/killswitch.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/killswitch
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/location
+  copying build/lib/protonvpn_nm_lib/core/location/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/location
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/metadata
+  copying build/lib/protonvpn_nm_lib/core/metadata/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/metadata
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/metadata/api
+  copying build/lib/protonvpn_nm_lib/core/metadata/api/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/metadata/api
+  copying build/lib/protonvpn_nm_lib/core/metadata/api/api_metadata_backend.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/metadata/api
+  copying build/lib/protonvpn_nm_lib/core/metadata/api/default_api_metadata.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/metadata/api
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/metadata/connection
+  copying build/lib/protonvpn_nm_lib/core/metadata/connection/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/metadata/connection
+  copying build/lib/protonvpn_nm_lib/core/metadata/connection/connection_metadata_backend.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/metadata/connection
+  copying build/lib/protonvpn_nm_lib/core/metadata/connection/default_connection_metadata.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/metadata/connection
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/notification
+  copying build/lib/protonvpn_nm_lib/core/notification/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/notification
+  copying build/lib/protonvpn_nm_lib/core/notification/notifications.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/notification
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/report
+  copying build/lib/protonvpn_nm_lib/core/report/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/report
+  copying build/lib/protonvpn_nm_lib/core/report/bug.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/report
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/servers
+  copying build/lib/protonvpn_nm_lib/core/servers/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/servers
+  copying build/lib/protonvpn_nm_lib/core/servers/list.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/servers
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/session
+  copying build/lib/protonvpn_nm_lib/core/session/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/session
+  copying build/lib/protonvpn_nm_lib/core/session/session.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/session
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/streaming
+  copying build/lib/protonvpn_nm_lib/core/streaming/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/streaming
+  copying build/lib/protonvpn_nm_lib/core/streaming/icons.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/streaming
+  copying build/lib/protonvpn_nm_lib/core/streaming/streaming.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/streaming
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/user_settings
+  copying build/lib/protonvpn_nm_lib/core/user_settings/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/user_settings
+  copying build/lib/protonvpn_nm_lib/core/user_settings/default_settings_backend.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/user_settings
+  copying build/lib/protonvpn_nm_lib/core/user_settings/settings_backend.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/user_settings
+  copying build/lib/protonvpn_nm_lib/core/user_settings/settings_configurator.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/user_settings
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/vpn
+  copying build/lib/protonvpn_nm_lib/core/vpn/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/vpn
+  copying build/lib/protonvpn_nm_lib/core/vpn/vpn_configuration.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/core/vpn
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/daemon
+  copying build/lib/protonvpn_nm_lib/daemon/__init__.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/daemon
+  copying build/lib/protonvpn_nm_lib/daemon/daemon_logger.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/daemon
+  copying build/lib/protonvpn_nm_lib/daemon/dbus_daemon_reconnector.py -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/daemon
+  copying build/lib/protonvpn_nm_lib/app.cfg -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/templates
+  copying build/lib/protonvpn_nm_lib/templates/openvpn_template.j2 -> build/bdist.linux-x86_64/wheel/protonvpn_nm_lib/templates
+  running install_egg_info
+  Copying protonvpn_nm_lib.egg-info to build/bdist.linux-x86_64/wheel/protonvpn_nm_lib-3.6.0-py3.10.egg-info
+  running install_scripts
+  adding license file "LICENSE" (matched pattern "LICEN[CS]E*")
+  adding license file "COPYING.md" (matched pattern "COPYING*")
+  creating build/bdist.linux-x86_64/wheel/protonvpn_nm_lib-3.6.0.dist-info/WHEEL
+  creating '/builddir/build/BUILD/protonvpn-nm-lib-3.6.0/.pyproject-builddir/pip-wheel-hm9vbgxh/tmpz0l25ik6/protonvpn_nm_lib-3.6.0-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+  adding 'protonvpn_nm_lib/__init__.py'
+  adding 'protonvpn_nm_lib/api.py'
+  adding 'protonvpn_nm_lib/app.cfg'
+  adding 'protonvpn_nm_lib/constants.py'
+  adding 'protonvpn_nm_lib/country_codes.py'
+  adding 'protonvpn_nm_lib/enums.py'
+  adding 'protonvpn_nm_lib/exceptions.py'
+  adding 'protonvpn_nm_lib/logger.py'
+  adding 'protonvpn_nm_lib/core/__init__.py'
+  adding 'protonvpn_nm_lib/core/country.py'
+  adding 'protonvpn_nm_lib/core/environment.py'
+  adding 'protonvpn_nm_lib/core/status.py'
+  adding 'protonvpn_nm_lib/core/subprocess_wrapper.py'
+  adding 'protonvpn_nm_lib/core/utilities.py'
+  adding 'protonvpn_nm_lib/core/utils.py'
+  adding 'protonvpn_nm_lib/core/client_config/__init__.py'
+  adding 'protonvpn_nm_lib/core/client_config/client_config.py'
+  adding 'protonvpn_nm_lib/core/connection_backend/__init__.py'
+  adding 'protonvpn_nm_lib/core/connection_backend/connection_backend.py'
+  adding 'protonvpn_nm_lib/core/connection_backend/nm_client/__init__.py'
+  adding 'protonvpn_nm_lib/core/connection_backend/nm_client/monitor_vpn_connection_start.py'
+  adding 'protonvpn_nm_lib/core/connection_backend/nm_client/nm_client.py'
+  adding 'protonvpn_nm_lib/core/connection_backend/nm_client/nm_client_mixin.py'
+  adding 'protonvpn_nm_lib/core/connection_backend/nm_client/openvpn/__init__.py'
+  adding 'protonvpn_nm_lib/core/connection_backend/nm_client/openvpn/configure_openvpn_connection.py'
+  adding 'protonvpn_nm_lib/core/connection_backend/nm_client/plugin/__init__.py'
+  adding 'protonvpn_nm_lib/core/connection_backend/nm_client/plugin/nm_plugin.py'
+  adding 'protonvpn_nm_lib/core/dbus/__init__.py'
+  adding 'protonvpn_nm_lib/core/dbus/dbus_logger.py'
+  adding 'protonvpn_nm_lib/core/dbus/dbus_login1_wrapper.py'
+  adding 'protonvpn_nm_lib/core/dbus/dbus_network_manager_wrapper.py'
+  adding 'protonvpn_nm_lib/core/dbus/dbus_reconnect.py'
+  adding 'protonvpn_nm_lib/core/dbus/dbus_wrapper.py'
+  adding 'protonvpn_nm_lib/core/keyring/__init__.py'
+  adding 'protonvpn_nm_lib/core/keyring/_base.py'
+  adding 'protonvpn_nm_lib/core/keyring/linuxkeyring.py'
+  adding 'protonvpn_nm_lib/core/keyring/textfilekeyring.py'
+  adding 'protonvpn_nm_lib/core/killswitch/__init__.py'
+  adding 'protonvpn_nm_lib/core/killswitch/ipv6_leak_protection.py'
+  adding 'protonvpn_nm_lib/core/killswitch/killswitch.py'
+  adding 'protonvpn_nm_lib/core/location/__init__.py'
+  adding 'protonvpn_nm_lib/core/metadata/__init__.py'
+  adding 'protonvpn_nm_lib/core/metadata/api/__init__.py'
+  adding 'protonvpn_nm_lib/core/metadata/api/api_metadata_backend.py'
+  adding 'protonvpn_nm_lib/core/metadata/api/default_api_metadata.py'
+  adding 'protonvpn_nm_lib/core/metadata/connection/__init__.py'
+  adding 'protonvpn_nm_lib/core/metadata/connection/connection_metadata_backend.py'
+  adding 'protonvpn_nm_lib/core/metadata/connection/default_connection_metadata.py'
+  adding 'protonvpn_nm_lib/core/notification/__init__.py'
+  adding 'protonvpn_nm_lib/core/notification/notifications.py'
+  adding 'protonvpn_nm_lib/core/report/__init__.py'
+  adding 'protonvpn_nm_lib/core/report/bug.py'
+  adding 'protonvpn_nm_lib/core/servers/__init__.py'
+  adding 'protonvpn_nm_lib/core/servers/list.py'
+  adding 'protonvpn_nm_lib/core/session/__init__.py'
+  adding 'protonvpn_nm_lib/core/session/session.py'
+  adding 'protonvpn_nm_lib/core/streaming/__init__.py'
+  adding 'protonvpn_nm_lib/core/streaming/icons.py'
+  adding 'protonvpn_nm_lib/core/streaming/streaming.py'
+  adding 'protonvpn_nm_lib/core/user_settings/__init__.py'
+  adding 'protonvpn_nm_lib/core/user_settings/default_settings_backend.py'
+  adding 'protonvpn_nm_lib/core/user_settings/settings_backend.py'
+  adding 'protonvpn_nm_lib/core/user_settings/settings_configurator.py'
+  adding 'protonvpn_nm_lib/core/vpn/__init__.py'
+  adding 'protonvpn_nm_lib/core/vpn/vpn_configuration.py'
+  adding 'protonvpn_nm_lib/daemon/__init__.py'
+  adding 'protonvpn_nm_lib/daemon/daemon_logger.py'
+  adding 'protonvpn_nm_lib/daemon/dbus_daemon_reconnector.py'
+  adding 'protonvpn_nm_lib/templates/openvpn_template.j2'
+  adding 'protonvpn_nm_lib-3.6.0.dist-info/COPYING.md'
+  adding 'protonvpn_nm_lib-3.6.0.dist-info/LICENSE'
+  adding 'protonvpn_nm_lib-3.6.0.dist-info/METADATA'
+  adding 'protonvpn_nm_lib-3.6.0.dist-info/WHEEL'
+  adding 'protonvpn_nm_lib-3.6.0.dist-info/top_level.txt'
+  adding 'protonvpn_nm_lib-3.6.0.dist-info/RECORD'
+  removing build/bdist.linux-x86_64/wheel
+  Building wheel for protonvpn-nm-lib (pyproject.toml): finished with status 'done'
+  Created wheel for protonvpn-nm-lib: filename=protonvpn_nm_lib-3.6.0-py3-none-any.whl size=106129 sha256=2ffac98692ed21f2c7df6cc37f6fe713df40857539293c5355bf4fd3a66be794
+  Stored in directory: /builddir/.cache/pip/wheels/3c/c9/08/3dcf1a5829155212626fc4988437f5fca512c656d9b0716bc9
+Successfully built protonvpn-nm-lib
++ RPM_EC=0
+++ jobs -p
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.vKstwr
++ umask 022
++ cd /builddir/build/BUILD
++ '[' /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64 '!=' / ']'
++ rm -rf /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64
+++ dirname /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64
++ mkdir -p /builddir/build/BUILDROOT
++ mkdir /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64
++ cd protonvpn-nm-lib-3.6.0
+++ ls /builddir/build/BUILD/protonvpn-nm-lib-3.6.0/pyproject-wheeldir/protonvpn_nm_lib-3.6.0-py3-none-any.whl
+++ xargs basename --multiple
+++ sed -E 's/([^-]+)-([^-]+)-.+\.whl/\1==\2/'
++ specifier=protonvpn_nm_lib==3.6.0
++ TMPDIR=/builddir/build/BUILD/protonvpn-nm-lib-3.6.0/.pyproject-builddir
++ /usr/bin/python3 -m pip install --root /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64 --no-deps --disable-pip-version-check --progress-bar off --verbose --ignore-installed --no-warn-script-location --no-index --no-cache-dir --find-links /builddir/build/BUILD/protonvpn-nm-lib-3.6.0/pyproject-wheeldir protonvpn_nm_lib==3.6.0
+Using pip 21.3.1 from /usr/lib/python3.10/site-packages/pip (python 3.10)
+Looking in links: /builddir/build/BUILD/protonvpn-nm-lib-3.6.0/pyproject-wheeldir
+Processing ./pyproject-wheeldir/protonvpn_nm_lib-3.6.0-py3-none-any.whl
+Installing collected packages: protonvpn-nm-lib
+Successfully installed protonvpn-nm-lib-3.6.0
++ '[' -d /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64/usr/bin ']'
++ rm -f /builddir/build/BUILD/pyproject-ghost-distinfo
++ site_dirs=()
++ '[' -d /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64/usr/lib/python3.10/site-packages ']'
++ site_dirs+=("/usr/lib/python3.10/site-packages")
++ '[' /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64/usr/lib64/python3.10/site-packages '!=' /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64/usr/lib/python3.10/site-packages ']'
++ '[' -d /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64/usr/lib64/python3.10/site-packages ']'
++ for site_dir in ${site_dirs[@]}
++ for distinfo in /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64$site_dir/*.dist-info
++ echo '%ghost /usr/lib/python3.10/site-packages/protonvpn_nm_lib-3.6.0.dist-info'
++ sed -i s/pip/rpm/ /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64/usr/lib/python3.10/site-packages/protonvpn_nm_lib-3.6.0.dist-info/INSTALLER
++ PYTHONPATH=/usr/lib/rpm/redhat
++ /usr/bin/python3 -B /usr/lib/rpm/redhat/pyproject_preprocess_record.py --buildroot /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64 --record /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64/usr/lib/python3.10/site-packages/protonvpn_nm_lib-3.6.0.dist-info/RECORD --output /builddir/build/BUILD/pyproject-record
++ rm -fv /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64/usr/lib/python3.10/site-packages/protonvpn_nm_lib-3.6.0.dist-info/RECORD
+removed '/builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64/usr/lib/python3.10/site-packages/protonvpn_nm_lib-3.6.0.dist-info/RECORD'
++ rm -fv /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64/usr/lib/python3.10/site-packages/protonvpn_nm_lib-3.6.0.dist-info/REQUESTED
+removed '/builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64/usr/lib/python3.10/site-packages/protonvpn_nm_lib-3.6.0.dist-info/REQUESTED'
+++ wc -l /builddir/build/BUILD/pyproject-ghost-distinfo
+++ cut -f1 '-d '
++ lines=1
++ '[' 1 -ne 1 ']'
++ /usr/bin/find-debuginfo -j8 --strict-build-id -m -i --build-id-seed 3.6.0-6.fc36 --unique-debug-suffix -3.6.0-6.fc36.x86_64 --unique-debug-src-base python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64 --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 110000000 -S debugsourcefiles.list /builddir/build/BUILD/protonvpn-nm-lib-3.6.0
+find: 'debug': No such file or directory
++ /usr/lib/rpm/check-buildroot
++ /usr/lib/rpm/redhat/brp-ldconfig
++ /usr/lib/rpm/brp-compress
++ /usr/lib/rpm/redhat/brp-strip-lto /usr/bin/strip
++ /usr/lib/rpm/brp-strip-static-archive /usr/bin/strip
++ /usr/lib/rpm/check-rpaths
++ /usr/lib/rpm/redhat/brp-mangle-shebangs
++ /usr/lib/rpm/redhat/brp-python-bytecompile '' 1 0
+Bytecompiling .py files below /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64/usr/lib/python3.10 using python3.10
++ /usr/lib/rpm/redhat/brp-python-hardlink
+Processing files: python-protonvpn-nm-lib-3.6.0-6.fc36.noarch
+error: Directory not found: /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64/usr/lib/python3.10/site-packages/protonvpn_nm_lib-3.6.0*.egg-info
+RPM build errors:
+    Directory not found: /builddir/build/BUILDROOT/python-protonvpn-nm-lib-3.6.0-6.fc36.x86_64/usr/lib/python3.10/site-packages/protonvpn_nm_lib-3.6.0*.egg-info
+Child return code was: 1
+EXCEPTION: [Error()]
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/mockbuild/trace_decorator.py", line 93, in trace
+    result = func(*args, **kw)
+  File "/usr/lib/python3.10/site-packages/mockbuild/util.py", line 600, in do_with_status
+    raise exception.Error("Command failed: \n # %s\n%s" % (command, output), child.returncode)
+mockbuild.exception.Error: Command failed: 
+ # /usr/bin/systemd-nspawn -q -M 8de29f6b595b46b1931615f8eb0de60b -D /var/lib/mock/fedora-rawhide-x86_64/root -a -u mockbuild --capability=cap_ipc_lock --bind=/tmp/mock-resolv.yxv7rz52:/etc/resolv.conf --bind=/dev/btrfs-control --bind=/dev/loop-control --bind=/dev/loop0 --bind=/dev/loop1 --bind=/dev/loop2 --bind=/dev/loop3 --bind=/dev/loop4 --bind=/dev/loop5 --bind=/dev/loop6 --bind=/dev/loop7 --bind=/dev/loop8 --bind=/dev/loop9 --bind=/dev/loop10 --bind=/dev/loop11 --console=pipe --setenv=TERM=vt100 --setenv=SHELL=/bin/bash --setenv=HOME=/builddir --setenv=HOSTNAME=mock --setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin --setenv=PROMPT_COMMAND=printf "\033]0;<mock-chroot>\007" --setenv=PS1=<mock-chroot> \s-\v\$  --setenv=LANG=C.UTF-8 --resolv-conf=off bash --login -c /usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/SPECS/python-protonvpn-nm-lib.spec
+
+Mock Version: 2.12

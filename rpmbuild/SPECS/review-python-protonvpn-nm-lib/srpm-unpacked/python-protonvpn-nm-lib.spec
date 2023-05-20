@@ -17,8 +17,6 @@ Source0: %{url}/archive/refs/tags/%{version}.tar.gz
 BuildArch: noarch
 
 BuildRequires: python3-devel
-BuildRequires: python3-pip
-BuildRequires: python3-pyxdg
 BuildRequires: python3-setuptools
 Requires: libsecret
 Requires: dbus-x11

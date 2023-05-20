@@ -1,0 +1,30 @@
+INFO: mock.py version 2.12 starting (python version = 3.10.0, NVR = mock-2.12-2.fc35)...
+Start: init plugins
+INFO: selinux enabled
+Finish: init plugins
+INFO: Signal handler active
+Start: run
+INFO: Start(/home/jwf/git/fedora/rpms/rpmbuild/rpmbuild/SPECS/python-protonvpn-nm-lib-3.6.0-6.fc35.src.rpm)  Config(fedora-rawhide-x86_64)
+Start: chroot init
+INFO: calling preinit hooks
+INFO: enabled root cache
+INFO: enabled package manager cache
+Start: cleaning package manager metadata
+Finish: cleaning package manager metadata
+INFO: enabled HW Info plugin
+Mock Version: 2.12
+INFO: Mock Version: 2.12
+Finish: chroot init
+Start: build phase for python-protonvpn-nm-lib-3.6.0-6.fc35.src.rpm
+Start: build setup for python-protonvpn-nm-lib-3.6.0-6.fc35.src.rpm
+Finish: build setup for python-protonvpn-nm-lib-3.6.0-6.fc35.src.rpm
+Start: Outputting list of installed packages
+Finish: Outputting list of installed packages
+Start: rpmbuild python-protonvpn-nm-lib-3.6.0-6.fc35.src.rpm
+Finish: rpmbuild python-protonvpn-nm-lib-3.6.0-6.fc35.src.rpm
+Finish: build phase for python-protonvpn-nm-lib-3.6.0-6.fc35.src.rpm
+ERROR: Exception(/home/jwf/git/fedora/rpms/rpmbuild/rpmbuild/SPECS/python-protonvpn-nm-lib-3.6.0-6.fc35.src.rpm) Config(fedora-rawhide-x86_64) 0 minutes 6 seconds
+INFO: Results and/or logs in: /home/jwf/git/fedora/rpms/rpmbuild/rpmbuild/SPECS/review-python-protonvpn-nm-lib/results
+ERROR: Command failed: 
+ # /usr/bin/systemd-nspawn -q -M 8de29f6b595b46b1931615f8eb0de60b -D /var/lib/mock/fedora-rawhide-x86_64/root -a -u mockbuild --capability=cap_ipc_lock --bind=/tmp/mock-resolv.yxv7rz52:/etc/resolv.conf --bind=/dev/btrfs-control --bind=/dev/loop-control --bind=/dev/loop0 --bind=/dev/loop1 --bind=/dev/loop2 --bind=/dev/loop3 --bind=/dev/loop4 --bind=/dev/loop5 --bind=/dev/loop6 --bind=/dev/loop7 --bind=/dev/loop8 --bind=/dev/loop9 --bind=/dev/loop10 --bind=/dev/loop11 --console=pipe --setenv=TERM=vt100 --setenv=SHELL=/bin/bash --setenv=HOME=/builddir --setenv=HOSTNAME=mock --setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin --setenv=PROMPT_COMMAND=printf "\033]0;<mock-chroot>\007" --setenv=PS1=<mock-chroot> \s-\v\$  --setenv=LANG=C.UTF-8 --resolv-conf=off bash --login -c /usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/SPECS/python-protonvpn-nm-lib.spec
+

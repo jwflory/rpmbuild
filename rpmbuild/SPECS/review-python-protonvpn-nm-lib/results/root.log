@@ -1,0 +1,473 @@
+INFO buildroot.py:491:  Mock Version: 2.12
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/dev/pts
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/dev/shm
+DEBUG buildroot.py:675:  kernel version == 5.14.10-300.fc35.x86_64
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/etc/fstab
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/etc/yum/yum.conf
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/etc/dnf/dnf.conf
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/var/log/yum.log
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/fedora-rawhide-x86_64/yum_cache', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/var/cache/dnf
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/fedora-rawhide-x86_64/dnf_cache', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.wz403jy2', '/var/lib/mock/fedora-rawhide-x86_64/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG buildroot.py:195:  rootdir = /var/lib/mock/fedora-rawhide-x86_64/root
+DEBUG buildroot.py:196:  resultdir = /home/jwf/git/fedora/rpms/rpmbuild/rpmbuild/SPECS/review-python-protonvpn-nm-lib/results
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/etc/pki/mock
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/etc/dnf
+DEBUG package_manager.py:570:  configure DNF vars
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:536:  Using nspawn with args None
+DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '39eac933d2b24611a6310b4b1e3d15d9', '-D', '/var/lib/mock/fedora-rawhide-x86_64/root', '-a', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/usr/sbin/usermod', '-u', '1000', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
+DEBUG util.py:446:  usermod: no changes
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/.initialized
+INFO backend.py:391:  Running in chroot: ['rpm --eval "%{_libdir}"']
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:536:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.guqq4j08:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
+DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'c1bb7f7b2e974241ae1b77ab7dd4d72f', '-D', '/var/lib/mock/fedora-rawhide-x86_64/root', '-a', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.guqq4j08:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/sh', '-c', 'rpm --eval "%{_libdir}"'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
+DEBUG util.py:446:  /usr/lib64
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:169:  kill orphans
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+INFO buildroot.py:491:  Mock Version: 2.12
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/dev/pts
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/dev/shm
+DEBUG buildroot.py:675:  kernel version == 5.14.10-300.fc35.x86_64
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/etc/fstab
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/etc/yum/yum.conf
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/etc/dnf/dnf.conf
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/var/log/yum.log
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/fedora-rawhide-x86_64/yum_cache', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/var/cache/dnf
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/fedora-rawhide-x86_64/dnf_cache', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.yith7skc', '/var/lib/mock/fedora-rawhide-x86_64/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG buildroot.py:195:  rootdir = /var/lib/mock/fedora-rawhide-x86_64/root
+DEBUG buildroot.py:196:  resultdir = /home/jwf/git/fedora/rpms/rpmbuild/rpmbuild/SPECS/review-python-protonvpn-nm-lib/results
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/etc/pki/mock
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/etc/dnf
+DEBUG package_manager.py:570:  configure DNF vars
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:536:  Using nspawn with args None
+DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'ece7165fb41141129425e90a02161edc', '-D', '/var/lib/mock/fedora-rawhide-x86_64/root', '-a', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/usr/sbin/usermod', '-u', '1000', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
+DEBUG util.py:446:  usermod: no changes
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/.initialized
+INFO backend.py:391:  Running in chroot: ['rm -rf $(rpm --eval %_builddir)/*']
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:536:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.ucjv2kdy:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
+DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'd545e6cbfcd54b32b576546feb740f3d', '-D', '/var/lib/mock/fedora-rawhide-x86_64/root', '-a', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.ucjv2kdy:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/sh', '-c', 'rm -rf $(rpm --eval %_builddir)/*'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:169:  kill orphans
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+INFO buildroot.py:491:  Mock Version: 2.12
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/dev/pts
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/dev/shm
+DEBUG buildroot.py:675:  kernel version == 5.14.10-300.fc35.x86_64
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/etc/fstab
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/etc/yum/yum.conf
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/etc/dnf/dnf.conf
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/var/log/yum.log
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/fedora-rawhide-x86_64/yum_cache', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/var/cache/dnf
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/fedora-rawhide-x86_64/dnf_cache', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.dbk_6fvy', '/var/lib/mock/fedora-rawhide-x86_64/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG buildroot.py:195:  rootdir = /var/lib/mock/fedora-rawhide-x86_64/root
+DEBUG buildroot.py:196:  resultdir = /home/jwf/git/fedora/rpms/rpmbuild/rpmbuild/SPECS/review-python-protonvpn-nm-lib/results
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/etc/pki/mock
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/etc/dnf
+DEBUG package_manager.py:570:  configure DNF vars
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:536:  Using nspawn with args None
+DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '99f4121e7e0a422a9aa931932780a0ab', '-D', '/var/lib/mock/fedora-rawhide-x86_64/root', '-a', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/usr/sbin/userdel', '-f', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:536:  Using nspawn with args None
+DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '3286b37a12db4691bc68dcaa3fc68ba6', '-D', '/var/lib/mock/fedora-rawhide-x86_64/root', '-a', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/usr/sbin/groupdel', 'mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:536:  Using nspawn with args None
+DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'a4e96b1acf7e4030993758fc802e12c2', '-D', '/var/lib/mock/fedora-rawhide-x86_64/root', '-a', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/usr/sbin/groupadd', '-g', '135', 'mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:536:  Using nspawn with args None
+DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '6328252470c34ac6833a7677386a1de3', '-D', '/var/lib/mock/fedora-rawhide-x86_64/root', '-a', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/usr/sbin/useradd', '-o', '-m', '-u', '1000', '-g', '135', '-d', '/builddir', '-n', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
+DEBUG util.py:444:  useradd: warning: the home directory /builddir already exists.
+DEBUG util.py:444:  useradd: Not copying any file from skel directory into it.
+DEBUG util.py:444:  Creating mailbox file: File exists
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/RPMS
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/RPMS
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/SPECS
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/SPECS
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/SRPMS
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/SRPMS
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/SOURCES
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/BUILD
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/BUILD
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/BUILDROOT
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/BUILDROOT
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/originals
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/fedora-rawhide-x86_64/root/builddir/build/originals
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/builddir
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/.initialized
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:536:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.yxv7rz52:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
+DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'cdbeec8a078141bd91967096e284ca2d', '-D', '/var/lib/mock/fedora-rawhide-x86_64/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.yxv7rz52:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/rpm', '-Uvh', '--nodeps', '/builddir/build/originals/python-protonvpn-nm-lib-3.6.0-6.fc35.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
+DEBUG util.py:446:  Updating / installing...
+DEBUG util.py:444:  python-protonvpn-nm-lib-3.6.0-6.fc35  warning: user jwf does not exist - using root
+DEBUG util.py:444:  warning: group jwf does not exist - using root
+DEBUG util.py:444:  warning: user jwf does not exist - using root
+DEBUG util.py:444:  warning: group jwf does not exist - using root
+DEBUG util.py:446:  ########################################
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:536:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.yxv7rz52:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
+DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '093f4634ac334643a0b855cdfa334dc3', '-D', '/var/lib/mock/fedora-rawhide-x86_64/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.yxv7rz52:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/rpm', '-qpl', '/builddir/build/originals/python-protonvpn-nm-lib-3.6.0-6.fc35.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
+DEBUG util.py:446:  3.6.0.tar.gz
+DEBUG util.py:446:  python-protonvpn-nm-lib.spec
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/proc
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate', 'tmpfs', '/var/lib/mock/fedora-rawhide-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/proc
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/var/lib/mock/fedora-rawhide-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '/proc', '/var/lib/mock/fedora-rawhide-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/sys
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate', 'tmpfs', '/var/lib/mock/fedora-rawhide-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/sys
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/var/lib/mock/fedora-rawhide-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '/sys', '/var/lib/mock/fedora-rawhide-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/dev/shm
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/fedora-rawhide-x86_64/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/dev/pts
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/mock/fedora-rawhide-x86_64/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/sys/fs/selinux
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/fedora-rawhide-x86_64/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/installation-homedir
+DEBUG package_manager.py:197:  ['/usr/bin/dnf', 'builddep', '--installroot', '/var/lib/mock/fedora-rawhide-x86_64/root/', '--releasever', '36', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', '/var/lib/mock/fedora-rawhide-x86_64/root//builddir/build/SRPMS/python-protonvpn-nm-lib-3.6.0-6.fc36.src.rpm']
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/usr/bin/dnf', 'builddep', '--installroot', '/var/lib/mock/fedora-rawhide-x86_64/root/', '--releasever', '36', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', '/var/lib/mock/fedora-rawhide-x86_64/root//builddir/build/SRPMS/python-protonvpn-nm-lib-3.6.0-6.fc36.src.rpm', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/fedora-rawhide-x86_64/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8'} and shell False
+DEBUG util.py:444:  No matches found for the following disable plugin patterns: local, spacewalk, versionlock
+DEBUG util.py:446:  fedora                                          8.6 kB/s |  17 kB     00:01    
+DEBUG util.py:446:  Package python3-devel-3.10.0-2.fc36.x86_64 is already installed.
+DEBUG util.py:446:  Package python3-setuptools-58.2.0-1.fc36.noarch is already installed.
+DEBUG util.py:446:  Dependencies resolved.
+DEBUG util.py:446:  Nothing to do.
+DEBUG util.py:446:  Complete!
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/fedora-rawhide-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:169:  kill orphans
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: rpm -qa --root '/var/lib/mock/fedora-rawhide-x86_64/root' --qf '%{nevra} %{buildtime} %{size} %{pkgid} installed\n' with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell True
+DEBUG util.py:446:  gpg-pubkey-38ab71f4-60242b08 1612983048 0 (none) installed
+DEBUG util.py:446:  gpg-pubkey-9867c58f-601c49ca 1612466634 0 (none) installed
+DEBUG util.py:446:  libgcc-11.2.1-6.fc36.x86_64 1634659195 198596 948bcb6d189fc7ee2bcf08df3e0ded0d installed
+DEBUG util.py:446:  crypto-policies-20210917-1.gitc9d86d1.fc36.noarch 1631901128 86073 f48797f7cee7bb76459a72ae397c2bbe installed
+DEBUG util.py:446:  fedora-release-identity-basic-36-0.7.noarch 1629727368 748 67e266a3ec721a2c5127bef2ed8c372b installed
+DEBUG util.py:446:  tzdata-2021a-2.fc35.noarch 1627084482 1817652 7912221f6ce6fe8b2a809fbf187f5199 installed
+DEBUG util.py:446:  rust-srpm-macros-18-2.fc35.noarch 1627067759 2447 f3c831d1f80f4c06a6cd1f7967318c75 installed
+DEBUG util.py:446:  qt5-srpm-macros-5.15.2-3.fc35.noarch 1627037606 492 be3fc262a57f16a89528f058f00a9dc3 installed
+DEBUG util.py:446:  publicsuffix-list-dafsa-20210518-2.fc35.noarch 1627015083 68815 66e8314a663c969e724c10861c660788 installed
+DEBUG util.py:446:  pkgconf-m4-1.8.0-1.fc35.noarch 1627221480 14187 d3b120a3b4d78e4a7e45396f30d9c709 installed
+DEBUG util.py:446:  perl-srpm-macros-1-42.fc35.noarch 1627009629 862 31fd62af1588ade5c32d0b0fcefa45d8 installed
+DEBUG util.py:446:  pcre2-syntax-10.38-1.fc36.noarch 1633960594 226482 377be20a3a1842554d538712bfe6d3b0 installed
+DEBUG util.py:446:  openblas-srpm-macros-2-10.fc35.noarch 1626993369 104 6ef8804b6de37b9a73f2b8502530fc68 installed
+DEBUG util.py:446:  ocaml-srpm-macros-6-5.fc35.noarch 1626992091 745 519a978bddefede5d9252679a1726863 installed
+DEBUG util.py:446:  nim-srpm-macros-3-5.fc35.noarch 1626987977 1098 50f3b27dca3c2554c3334b6908fa8da4 installed
+DEBUG util.py:446:  ncurses-base-6.2-8.20210508.fc35.noarch 1626991807 307293 6fc56839d735263a9cfc0886c8d62377 installed
+DEBUG util.py:446:  libssh-config-0.9.6-1.fc36.noarch 1632238630 277 1f87ba3b630a8afeebedabfad4aeee99 installed
+DEBUG util.py:446:  kernel-srpm-macros-1.0-6.fc35.noarch 1626954864 621 f34169675490393047c9f76bb0dd5167 installed
+DEBUG util.py:446:  gnat-srpm-macros-4-14.fc35.noarch 1626923297 725 acfa6b9efd8326ee09e42947528d2fad installed
+DEBUG util.py:446:  ghc-srpm-macros-1.5.0-5.fc35.noarch 1626920787 535 83b17a3ad07bb6dce09a1113c2fbfc49 installed
+DEBUG util.py:446:  fpc-srpm-macros-1.3-4.fc35.noarch 1626912175 144 46535e4ca0d7762b018d90f26785ebe9 installed
+DEBUG util.py:446:  fedora-gpg-keys-36-0.3.noarch 1629216661 118311 1d520683e0e7cc4221ade46bec750891 installed
+DEBUG util.py:446:  fedora-release-36-0.7.noarch 1629727368 0 e093deb4e2f58f692e9b126dffe62afa installed
+DEBUG util.py:446:  fedora-release-common-36-0.7.noarch 1629727368 17568 ada8b78d5dd5dc784b1aa329da05df76 installed
+DEBUG util.py:446:  fedora-repos-rawhide-36-0.3.noarch 1629216661 2203 d83e34aeb6aa0cfd354175876d3b63b1 installed
+DEBUG util.py:446:  fedora-repos-36-0.3.noarch 1629216661 4597 8205ec5fae44ad89b015238f2f0b462b installed
+DEBUG util.py:446:  setup-2.13.9.1-2.fc35.noarch 1627075056 736053 64f8b1c53f47bf22f25324c6e700cc72 installed
+DEBUG util.py:446:  filesystem-3.16-1.fc36.x86_64 1632304495 106 696c3c32224ced91b048af23913ccaef installed
+DEBUG util.py:446:  basesystem-11-12.fc35.noarch 1626892315 0 af618e2cf6a1583a176bb5e45b0a5068 installed
+DEBUG util.py:446:  glibc-gconv-extra-2.34.9000-15.fc36.x86_64 1634766148 8225740 a5d862cdb9914230be10f7673977f3a8 installed
+DEBUG util.py:446:  glibc-minimal-langpack-2.34.9000-15.fc36.x86_64 1634766148 0 170a4b8e81a2dc8bfb98e4681142508f installed
+DEBUG util.py:446:  glibc-common-2.34.9000-15.fc36.x86_64 1634766148 1097554 3127cbada1be2351ef0a0195f33e9c13 installed
+DEBUG util.py:446:  glibc-2.34.9000-15.fc36.x86_64 1634766148 6281179 a281549ad97fd072b36a914d9868a853 installed
+DEBUG util.py:446:  ncurses-libs-6.2-8.20210508.fc35.x86_64 1626985943 996375 2f994f573415c7206570f1717dcf626b installed
+DEBUG util.py:446:  bash-5.1.8-2.fc36.x86_64 1630324752 7739604 596727f5dd4f142a4fc1bfbc264c4a35 installed
+DEBUG util.py:446:  zlib-1.2.11-30.fc35.x86_64 1627555046 203449 fc88ceb52649360b8d871331220b0f6c installed
+DEBUG util.py:446:  bzip2-libs-1.0.8-9.fc35.x86_64 1626894869 78660 0d16644a1c137a65208e4cf440c4d832 installed
+DEBUG util.py:446:  xz-libs-5.2.5-7.fc35.x86_64 1627092507 181437 a020e7464332c7f3873c34907eacff50 installed
+DEBUG util.py:446:  elfutils-libelf-0.185-5.fc35.x86_64 1628259076 992174 34da460b225bcbd122e42ed8c6ca2415 installed
+DEBUG util.py:446:  libstdc++-11.2.1-6.fc36.x86_64 1634659195 2479101 89257d9a10d316dc32c8e304e071efbe installed
+DEBUG util.py:446:  libuuid-2.37.2-1.fc36.x86_64 1629194240 34397 2edb70a01bb7932f8358c5992c0dc474 installed
+DEBUG util.py:446:  libzstd-1.5.0-2.fc35.x86_64 1627093306 1028163 c56a81660a167665720337b2d0c97070 installed
+DEBUG util.py:446:  gmp-1:6.2.0-7.fc36.x86_64 1630427194 817886 eba3ce822c0268f8dd3d9a6e512cf55b installed
+DEBUG util.py:446:  libattr-2.5.1-3.fc35.x86_64 1626891756 29341 a17b4483f4a01b5eb6d01f41842da285 installed
+DEBUG util.py:446:  libacl-2.3.1-2.fc35.x86_64 1626889009 41090 7f91f200578996693fbd6ba53b745348 installed
+DEBUG util.py:446:  libcap-2.48-3.fc35.x86_64 1626961088 180511 fa377911e225ceb086daf490d0c94ab7 installed
+DEBUG util.py:446:  libcom_err-1.46.4-1.fc36.x86_64 1629807360 68945 a7c2723b8bbf1bf73dbbfd124a54cf3c installed
+DEBUG util.py:446:  libxcrypt-4.4.26-4.fc36.x86_64 1632260314 275090 950aebba01d9009bb03a60a10a078640 installed
+DEBUG util.py:446:  popt-1.18-6.fc36.x86_64 1631658902 130248 1d7d1c136af2df09061406932ba0c8c2 installed
+DEBUG util.py:446:  readline-8.1-3.fc35.x86_64 1627041494 492684 aaf61524862c6beeb77380c15d658a93 installed
+DEBUG util.py:446:  mpfr-4.1.0-8.fc35.x86_64 1626983884 802431 de62fb0bd1ab4954a5a3e601e4f95b58 installed
+DEBUG util.py:446:  dwz-0.14-2.fc35.x86_64 1626907299 280646 8ae97d97b2c29bfe9e0ee73643bedfdd installed
+DEBUG util.py:446:  unzip-6.0-53.fc35.x86_64 1627085048 394499 60a40024a1a2cc4e6734159ed1108959 installed
+DEBUG util.py:446:  file-libs-5.41-1.fc36.x86_64 1634677368 8807844 3f6a37d6c5bbd22a9376ce12608906e9 installed
+DEBUG util.py:446:  file-5.41-1.fc36.x86_64 1634677368 98373 72b8f28bac0368bc72027dff2bbaa97b installed
+DEBUG util.py:446:  openssl1.1-1:1.1.1l-1.fc36.x86_64 1632138772 3876243 29868be49deeb8c77436b599365172d1 installed
+DEBUG util.py:446:  sqlite-libs-3.36.0-4.fc36.x86_64 1629274141 1338849 1e9a9fef41195dcb15fa5d655a3d168d installed
+DEBUG util.py:446:  alternatives-1.19-1.fc35.x86_64 1627054363 63264 5cd393a56ec2efe3a8dd3f9abe55f043 installed
+DEBUG util.py:446:  libcap-ng-0.8.2-7.fc36.x86_64 1632337115 75012 57098680eb7832ece9c9089fe53a280e installed
+DEBUG util.py:446:  audit-libs-3.0.6-1.fc36.x86_64 1633107302 307281 f50f5dee1a1c6705169fa17042f6257a installed
+DEBUG util.py:446:  libsepol-3.3-1.fc36.x86_64 1634898517 755963 4ddeff0eab7624bdcd30f3cc2e13147d installed
+DEBUG util.py:446:  libsmartcols-2.37.2-1.fc36.x86_64 1629194240 135371 87c55bfc59efd942ef74441cc73528b6 installed
+DEBUG util.py:446:  libunistring-0.9.10-14.fc35.x86_64 1626970676 1642923 fb4cd52955e96d4fe989ece3153119fa installed
+DEBUG util.py:446:  libidn2-2.3.2-3.fc36.x86_64 1630430183 291720 8bec67ffc0040305e3efb64d378cf49a installed
+DEBUG util.py:446:  lua-libs-5.4.3-2.fc35.x86_64 1626974759 555606 708062639b1ec59c853e3949ecb655b4 installed
+DEBUG util.py:446:  lz4-libs-1.9.3-3.fc35.x86_64 1626976924 145387 35f02696af287b52c0a8ccd356299a79 installed
+DEBUG util.py:446:  libpsl-0.21.1-4.fc35.x86_64 1626969221 78520 418fc994aecd296a0e9f3a900a46f7c5 installed
+DEBUG util.py:446:  zip-3.0-31.fc35.x86_64 1627093104 712847 8bc0595d10f2bc85179113ad1484aba4 installed
+DEBUG util.py:446:  zstd-1.5.0-2.fc35.x86_64 1627093306 1960479 13397e9d0ff36b3adf5abe7703fd0c04 installed
+DEBUG util.py:446:  libxml2-2.9.12-6.fc35.x86_64 1626972022 1923894 58e6c4b8f0daf9cb8cf8355e9855a6ce installed
+DEBUG util.py:446:  libarchive-3.5.2-2.fc36.x86_64 1630307534 907245 2cf74a4f9a53cf7b134f11d53d18f855 installed
+DEBUG util.py:446:  bzip2-1.0.8-9.fc35.x86_64 1626894869 93960 09e7295f0c331b654d38e247851f9801 installed
+DEBUG util.py:446:  elfutils-default-yama-scope-0.185-5.fc35.noarch 1628259164 1810 1a4ed61c32688e5f2f93ce33501c4a16 installed
+DEBUG util.py:446:  info-6.8-2.fc35.x86_64 1627082242 503786 d1e469daef55e19b18e1753de365ed7b installed
+DEBUG util.py:446:  ed-1.14.2-11.fc35.x86_64 1626907257 129811 094cf9934b01744c0c414314070af36f installed
+DEBUG util.py:446:  cpio-2.13-11.fc36.x86_64 1630325808 1083898 cc85cc47d3f25270b54345d0e0ae768a installed
+DEBUG util.py:446:  diffutils-3.8-1.fc35.x86_64 1627895573 1563061 b288fa5059e9d347c23ecf7459de1392 installed
+DEBUG util.py:446:  gdbm-libs-1:1.22-1.fc36.x86_64 1634724719 128586 372620214f5cb6cdd6fde1753825fb46 installed
+DEBUG util.py:446:  keyutils-libs-1.6.1-3.fc35.x86_64 1626955294 55801 535a1f1ca9e121cd9574c95b07820bb7 installed
+DEBUG util.py:446:  libbrotli-1.0.9-6.fc35.x86_64 1626893913 784274 d45caad095b8be733739ddc36bbf1a3b installed
+DEBUG util.py:446:  libdb-5.3.28-50.fc36.x86_64 1631794375 1922790 9165d206f0ee0ccb1da2c1528586359a installed
+DEBUG util.py:446:  libeconf-0.4.0-2.fc35.x86_64 1626962507 46171 1d425d5dc6879bacad175542465b0706 installed
+DEBUG util.py:446:  libffi-3.1-28.fc34.x86_64 1611731196 56840 077bc570623183e5b0eb94e8ef14e874 installed
+DEBUG util.py:446:  p11-kit-0.23.22-4.fc35.x86_64 1626999243 1659536 2e7cda635f37cded07d6b2c83065ba9a installed
+DEBUG util.py:446:  libgomp-11.2.1-6.fc36.x86_64 1634659195 412772 732c7e4d782e9dd4f71784cf913cadb6 installed
+DEBUG util.py:446:  libgpg-error-1.42-3.fc35.x86_64 1626964592 836808 bc7cec2126eb6c5f164a0d5dadd176cb installed
+DEBUG util.py:446:  libgcrypt-1.9.4-1.fc36.x86_64 1629720680 1392852 59e2cc2fed649bc002fb75e05e789b1d installed
+DEBUG util.py:446:  libnghttp2-1.46.0-1.fc36.x86_64 1634648839 162532 f366923935df459db89aea672fbf3eb8 installed
+DEBUG util.py:446:  libpkgconf-1.8.0-1.fc35.x86_64 1627221416 75953 4a3b0d15ab4d7e8482d98d677ad5b928 installed
+DEBUG util.py:446:  pkgconf-1.8.0-1.fc35.x86_64 1627221416 81451 f6bab719cb8f1b8c5862882bc45d2b45 installed
+DEBUG util.py:446:  pkgconf-pkg-config-1.8.0-1.fc35.x86_64 1627221416 989 a02a23bcacf44a3bdfc74247bc5d893c installed
+DEBUG util.py:446:  libsigsegv-2.13-3.fc35.x86_64 1626969727 50250 f9aa2f7104c70b331c044360a70664f4 installed
+DEBUG util.py:446:  gawk-5.1.0-4.fc35.x86_64 1626915218 1684030 4c2057f0c12df0632024f9b90f075c28 installed
+DEBUG util.py:446:  libtasn1-4.16.0-6.fc35.x86_64 1626970012 183868 de5f598de38a61b7288a400c1398b8e3 installed
+DEBUG util.py:446:  p11-kit-trust-0.23.22-4.fc35.x86_64 1626999243 451087 70a611a55f6a52dbf5e6966daff44ae9 installed
+DEBUG util.py:446:  libverto-0.3.2-2.fc35.x86_64 1626970819 30277 cbb25f656c2c22c557ee83ad0d80dfb1 installed
+DEBUG util.py:446:  pcre-8.45-1.fc36.x86_64 1629279764 539220 6a5448ab58ca42fa50de789ab3a15848 installed
+DEBUG util.py:446:  grep-3.7-1.fc36.x86_64 1629144799 949303 418a97f7521220f4733ccdad7c84451f installed
+DEBUG util.py:446:  xz-5.2.5-7.fc35.x86_64 1627092507 685425 dd341adc7fbb8844cb9965b1eb893ec4 installed
+DEBUG util.py:446:  pcre2-10.38-1.fc36.x86_64 1633960382 633266 7e31c513ab9042cc939c766c7b1efd58 installed
+DEBUG util.py:446:  libselinux-3.3-1.fc36.x86_64 1634903551 169437 2d15b3d1a0de42de5fbbcc2a6508ca61 installed
+DEBUG util.py:446:  sed-4.8-8.fc35.x86_64 1627074776 813479 18a95fcfe58463e71717b520d2412a8a installed
+DEBUG util.py:446:  findutils-1:4.8.0-4.fc35.x86_64 1626911297 1758182 f636dbf756669a4ed38bc1dff6c63018 installed
+DEBUG util.py:446:  libsemanage-3.3-1.fc36.x86_64 1634905114 303896 8ed4e5384f70b0f9d587277fd6c770b9 installed
+DEBUG util.py:446:  shadow-utils-2:4.9-4.fc36.x86_64 1632389763 3836725 4c06b2ae93a5fa3a4322efb1fed307b2 installed
+DEBUG util.py:446:  libutempter-1.2.1-5.fc35.x86_64 1626970643 58697 1c069b7288b0240929a10f6ac1cc1514 installed
+DEBUG util.py:446:  patch-2.7.6-15.fc35.x86_64 1627000523 265410 1e6cd06c190ae494f76619ff9487c79b installed
+DEBUG util.py:446:  tar-2:1.34-2.fc35.x86_64 1627081075 3156278 052b560465e9eebf3c4f7986aa10ee0b installed
+DEBUG util.py:446:  xxhash-libs-0.8.0-4.fc35.x86_64 1627092400 105030 300fca06d5c6d5eaa03afd87981cbdd2 installed
+DEBUG util.py:446:  coreutils-common-9.0-2.fc36.x86_64 1633350515 11033739 13dc7ddd21a60338fa3b873707724bed installed
+DEBUG util.py:446:  openssl-libs-1:3.0.0-1.fc36.x86_64 1631206141 6910251 eecd9be83d355e37db387ec828737d70 installed
+DEBUG util.py:446:  coreutils-9.0-2.fc36.x86_64 1633350515 5711386 418571a189b3343b279a0ff40fde28af installed
+DEBUG util.py:446:  ca-certificates-2021.2.50-3.fc35.noarch 1626894832 939948 aff01f0137ea9195efe407be332a9c66 installed
+DEBUG util.py:446:  krb5-libs-1.19.2-3.fc36.x86_64 1629825434 2198405 86be5f59ddccdf777917f48e6d2f57cf installed
+DEBUG util.py:446:  libblkid-2.37.2-1.fc36.x86_64 1629194240 230761 bcf6f579f2b0dd97f8bd07fd7c1ba638 installed
+DEBUG util.py:446:  libmount-2.37.2-1.fc36.x86_64 1629194240 311117 0947343ed48d8d733d44ab4c62b40f85 installed
+DEBUG util.py:446:  libtirpc-1.3.2-1.rc1.fc36.x86_64 1631022089 208178 913ab7f77980f2baa1545e35fdbaf84b installed
+DEBUG util.py:446:  gzip-1.11-1.fc36.x86_64 1634828906 370548 794ed9a20c54f84518e4136dd1e54b06 installed
+DEBUG util.py:446:  systemd-libs-249.5-1.fc36.x86_64 1634204391 1730640 0f0261b75e5750b545bd10aa26ce4684 installed
+DEBUG util.py:446:  util-linux-core-2.37.2-1.fc36.x86_64 1629194240 1279584 d296b4db24ad10daca513e302e92ceac installed
+DEBUG util.py:446:  cracklib-2.9.6-27.fc36.x86_64 1630357018 251474 942e9fca4ce39033b500229201baeb56 installed
+DEBUG util.py:446:  libnsl2-1.3.0-4.fc35.x86_64 1626968101 130270 ec90470cea464c30c21887ef0b6b5f78 installed
+DEBUG util.py:446:  libpwquality-1.4.4-6.fc36.x86_64 1628688648 415452 f743797d80fbc29a7c38d3fda554ca5b installed
+DEBUG util.py:446:  pam-1.5.2-6.fc36.x86_64 1633617824 1954020 ddd3c23fae599e2290c4c4d32ba5ade9 installed
+DEBUG util.py:446:  libfdisk-2.37.2-1.fc36.x86_64 1629194240 368883 94b88429c34d3017d1a8cc4436e6f32f installed
+DEBUG util.py:446:  cyrus-sasl-lib-2.1.27-16.fc36.x86_64 1634043547 2409888 e427e9a94b2dd7fd03de97dae3b456e8 installed
+DEBUG util.py:446:  openldap-2.4.59-4.fc36.x86_64 1633097029 718693 f7df4289afa6e71199687f3a9e8ebb08 installed
+DEBUG util.py:446:  libssh-0.9.6-1.fc36.x86_64 1632238467 513065 b5b56898289f134595e72319cd4acaaf installed
+DEBUG util.py:446:  libcurl-7.79.1-2.fc36.x86_64 1633338328 681070 c7c4f636ac87fae79cd9e14efba601ca installed
+DEBUG util.py:446:  elfutils-libs-0.185-5.fc35.x86_64 1628259076 709117 2c1ab9675c840b1b828052157ed4cc9f installed
+DEBUG util.py:446:  elfutils-debuginfod-client-0.185-5.fc35.x86_64 1628259076 52049 0303741a9495931d73ae739631434d14 installed
+DEBUG util.py:446:  binutils-gold-2.37-15.fc36.x86_64 1634135253 1981211 cf21d1b66470a86fd7dcbefef1caf53a installed
+DEBUG util.py:446:  binutils-2.37-15.fc36.x86_64 1634135253 34151869 c97411a22cc1d15490830ef69edea69f installed
+DEBUG util.py:446:  elfutils-0.185-5.fc35.x86_64 1628259076 2817145 f9356ecaba6fa95c491d3c17b313d91d installed
+DEBUG util.py:446:  gdb-minimal-11.1-2.fc36.x86_64 1634259467 12683252 321ad744d60ba03559e1d836bd558b10 installed
+DEBUG util.py:446:  debugedit-5.0-2.fc35.x86_64 1627943772 194459 5239705164dbdb4cc743115c72824aaa installed
+DEBUG util.py:446:  curl-7.79.1-2.fc36.x86_64 1633338328 723156 4b4a5cfb49a959b1eed69fb87b2cbf88 installed
+DEBUG util.py:446:  rpm-4.17.0-1.fc36.1.x86_64 1631644675 2948922 a420c79ff2a9cffb2ef50aad8ddacab4 installed
+DEBUG util.py:446:  rpm-libs-4.17.0-1.fc36.1.x86_64 1631644675 775140 25b1fbc8993fe8028856f1bc219d9e3e installed
+DEBUG util.py:446:  rpm-build-libs-4.17.0-1.fc36.1.x86_64 1631644675 199518 7056d76c06bed3b527421ac5b8e6a828 installed
+DEBUG util.py:446:  efi-srpm-macros-5-4.fc36.noarch 1630608889 41111 9ac42e695d91164878696a83a337da1f installed
+DEBUG util.py:446:  lua-srpm-macros-1-5.fc35.noarch 1626974425 1314 1d371eb16120fb40dbf7c0f03c3e8291 installed
+DEBUG util.py:446:  rpmautospec-rpm-macros-0.2.5-1.fc35.noarch 1628264740 698 8d7c0d5e1ebd255a29531ed50f7eac01 installed
+DEBUG util.py:446:  fonts-srpm-macros-1:2.0.5-6.fc35.noarch 1626911835 56503 e028a54cd411cf0f8ad51dcc2fde13e2 installed
+DEBUG util.py:446:  go-srpm-macros-3.0.11-2.fc35.noarch 1626930626 60319 a69641b37d6aeebdd34a6f34ebf4a394 installed
+DEBUG util.py:446:  python-srpm-macros-3.10-10.fc36.noarch 1634056180 41174 14796343f996ddb6b11de9a46b0b7868 installed
+DEBUG util.py:446:  redhat-rpm-config-199-1.fc36.noarch 1632308232 174007 41f70a77cdbbbdf67d40e2d8e1b0b402 installed
+DEBUG util.py:446:  rpm-build-4.17.0-1.fc36.1.x86_64 1631644675 145180 716dd2c7165dcb7459337bf33d1fc737 installed
+DEBUG util.py:446:  util-linux-2.37.2-1.fc36.x86_64 1629194240 11216740 26af3a095042c6a0c6540785313ea546 installed
+DEBUG util.py:446:  which-2.21-29.fc36.x86_64 1634290770 82349 2b68973c023b06d3ad05b3425e99ab41 installed
+DEBUG util.py:446:  python-rpm-macros-3.10-10.fc36.noarch 1634056180 8119 478687283c7c8c1661fb0fb9b4ea82a9 installed
+DEBUG util.py:446:  python3-rpm-macros-3.10-10.fc36.noarch 1634056180 4926 69f01cc9e718a64e46a54e1774c8efc7 installed
+DEBUG util.py:446:  pyproject-rpm-macros-0-47.fc36.noarch 1631274761 67207 462701baeb34243cbc13c05b4f1d6e2d installed
+DEBUG util.py:446:  python-setuptools-wheel-58.2.0-1.fc36.noarch 1634822197 594370 944df2c039d85f4bf6c8e09d035f1fd8 installed
+DEBUG util.py:446:  python-pip-wheel-21.3-1.fc36.noarch 1634296318 1231961 5e5a82440dd86070995c1666d080a93c installed
+DEBUG util.py:446:  mpdecimal-2.5.1-2.fc35.x86_64 1626983795 246955 5a959017ea843dc9cd834137e17dcbc5 installed
+DEBUG util.py:446:  expat-2.4.1-2.fc35.x86_64 1626909776 295041 1daae32a6bd9b6d68dce05f6cc47415a installed
+DEBUG util.py:446:  python3-3.10.0-2.fc36.x86_64 1633437650 33130 8897a7af80ba3f03bda5903e505f397f installed
+DEBUG util.py:446:  python3-libs-3.10.0-2.fc36.x86_64 1633437650 33057311 ac68de88ad7240a2db739101232cece6 installed
+DEBUG util.py:446:  python3-pyparsing-2.4.7-9.fc35.noarch 1627016952 647492 a028d078073a688bb8a587dd290ef018 installed
+DEBUG util.py:446:  python3-packaging-21.0-2.fc35.noarch 1627027690 246115 db92d1c21ba22f87e5f5bae09a6d4247 installed
+DEBUG util.py:446:  python3-rpm-generators-12-8.fc35.noarch 1627032205 78354 b411910b0087167a8f625898126e9cb5 installed
+DEBUG util.py:446:  python3-devel-3.10.0-2.fc36.x86_64 1633437650 797665 107cac81d907fb21201fdd1e42de532c installed
+DEBUG util.py:446:  python3-pyxdg-0.27-3.fc35.noarch 1627036645 339011 02a438e081c0b1229007345a01cc570f installed
+DEBUG util.py:446:  python3-setuptools-58.2.0-1.fc36.noarch 1634822197 4769694 9279acabca6ba57cdbf7a90b0c7d4751 installed
+DEBUG util.py:446:  python3-wheel-1:0.37.0-1.fc36.noarch 1629291722 214620 26ef322cbcab0043647fd947706925ff installed
+DEBUG util.py:446:  python3-pip-21.3.1-1.fc36.noarch 1635195808 9497736 f88f2d731a94f5df1cc00a195a93758f installed
+DEBUG util.py:446:  python3-six-1.16.0-4.fc35.noarch 1627032980 106857 2bd146213fd8694f7cc4659dbf43aa7d installed
+DEBUG util.py:446:  python3-filelock-3.0.12-12.fc35.noarch 1627373756 33701 e2d1d1a4ebfaaa61af3688c6a0484a51 installed
+DEBUG util.py:446:  python3-toml-0.10.2-5.fc35.noarch 1627374446 102372 f05c433c1cb7600141b8948ea4c93882 installed
+DEBUG util.py:446:  python3-py-1.10.0-5.fc35.noarch 1627028982 2842768 b1bc52c052ea0713a59883c178a187e4 installed
+DEBUG util.py:446:  python3-pluggy-1.0.0-1.fc36.noarch 1630053293 100225 6cab2dde649d4aed673c961c42027592 installed
+DEBUG util.py:446:  python3-platformdirs-2.3.0-1.fc36.noarch 1630368619 92918 21eab3a5f68f22e79243b5ba825b1d7f installed
+DEBUG util.py:446:  python3-distlib-0.3.2-1.fc35.noarch 1628075058 924483 76c317c50a54607407efb2de25d2f7f4 installed
+DEBUG util.py:446:  python-wheel-wheel-1:0.37.0-1.fc36.noarch 1629291722 36305 3f667f06051f74a570e8eb3f81ce5429 installed
+DEBUG util.py:446:  python3-virtualenv-20.8.1-1.fc36.noarch 1633612483 676074 f14950536e3b1762b7128981557e5b07 installed
+DEBUG util.py:446:  tox-3.24.4-1.fc36.noarch 1634307802 572174 e18e9484de5b2f3be27901fbad42db90 installed
+DEBUG util.py:446:  python3-tox-current-env-0.0.6-4.fc35.noarch 1628153789 44855 9903284e54ba95d4a4c8165d9426af5a installed
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:169:  kill orphans
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+INFO buildroot.py:491:  Mock Version: 2.12
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/dev/pts
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/dev/shm
+DEBUG buildroot.py:675:  kernel version == 5.14.10-300.fc35.x86_64
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/etc/fstab
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/etc/yum/yum.conf
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/etc/dnf/dnf.conf
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/var/log/yum.log
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/fedora-rawhide-x86_64/yum_cache', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/var/cache/dnf
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/fedora-rawhide-x86_64/dnf_cache', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.o7jeacn8', '/var/lib/mock/fedora-rawhide-x86_64/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG buildroot.py:195:  rootdir = /var/lib/mock/fedora-rawhide-x86_64/root
+DEBUG buildroot.py:196:  resultdir = /home/jwf/git/fedora/rpms/rpmbuild/rpmbuild/SPECS/review-python-protonvpn-nm-lib/results
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/etc/pki/mock
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/fedora-rawhide-x86_64/root/etc/dnf
+DEBUG package_manager.py:570:  configure DNF vars
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:536:  Using nspawn with args None
+DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '5ed831ca1ed849f891a6ba4bc154caf4', '-D', '/var/lib/mock/fedora-rawhide-x86_64/root', '-a', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/usr/sbin/usermod', '-u', '1000', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
+DEBUG util.py:446:  usermod: no changes
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:30:  touching file: /var/lib/mock/fedora-rawhide-x86_64/root/.initialized
+INFO backend.py:391:  Running in chroot: ['rpm --eval %_topdir']
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:536:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.5530ncvj:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
+DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '3b6c234bb0db4708b136c2040a32e1b2', '-D', '/var/lib/mock/fedora-rawhide-x86_64/root', '-a', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.5530ncvj:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/sh', '-c', 'rpm --eval %_topdir'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
+DEBUG util.py:446:  /builddir/build
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:169:  kill orphans
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/fedora-rawhide-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0

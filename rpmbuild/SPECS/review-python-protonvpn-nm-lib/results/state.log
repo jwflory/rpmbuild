@@ -1,0 +1,22 @@
+2021-10-28 23:11:53,080 - Mock Version: 2.12
+2021-10-28 23:11:53,255 - Finish: chroot init
+2021-10-28 23:11:53,293 - Start: chroot ['rpm --eval "%{_libdir}"']
+2021-10-28 23:11:53,398 - Finish: chroot ['rpm --eval "%{_libdir}"']
+2021-10-28 23:11:54,218 - Mock Version: 2.12
+2021-10-28 23:11:54,400 - Finish: chroot init
+2021-10-28 23:11:54,442 - Start: chroot ['rm -rf $(rpm --eval %_builddir)/*']
+2021-10-28 23:11:54,543 - Finish: chroot ['rm -rf $(rpm --eval %_builddir)/*']
+2021-10-28 23:11:55,390 - Mock Version: 2.12
+2021-10-28 23:11:56,074 - Finish: chroot init
+2021-10-28 23:11:56,075 - Start: build phase for python-protonvpn-nm-lib-3.6.0-6.fc35.src.rpm
+2021-10-28 23:11:56,076 - Start: build setup for python-protonvpn-nm-lib-3.6.0-6.fc35.src.rpm
+2021-10-28 23:11:59,483 - Finish: build setup for python-protonvpn-nm-lib-3.6.0-6.fc35.src.rpm
+2021-10-28 23:11:59,484 - Start: Outputting list of installed packages
+2021-10-28 23:11:59,557 - Finish: Outputting list of installed packages
+2021-10-28 23:11:59,557 - Start: rpmbuild python-protonvpn-nm-lib-3.6.0-6.fc35.src.rpm
+2021-10-28 23:12:02,055 - Finish: rpmbuild python-protonvpn-nm-lib-3.6.0-6.fc35.src.rpm
+2021-10-28 23:12:02,055 - Finish: build phase for python-protonvpn-nm-lib-3.6.0-6.fc35.src.rpm
+2021-10-28 23:12:02,885 - Mock Version: 2.12
+2021-10-28 23:12:03,064 - Finish: chroot init
+2021-10-28 23:12:03,110 - Start: chroot ['rpm --eval %_topdir']
+2021-10-28 23:12:03,211 - Finish: chroot ['rpm --eval %_topdir']
